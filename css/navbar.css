@@ -1,0 +1,30 @@
+nav {
+  background-color: whitesmoke;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Baloo", sans-serif;
+  font-size: 30px;
+  line-height: 1;
+}
+
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: auto;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+}
+
+nav .logo img {
+  padding: 10px 0 0 0;
+  height: 60px;
+  width: auto;
+  align-self: center;
+}
