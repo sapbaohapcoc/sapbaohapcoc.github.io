@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@font-face {
+  font-family: 'Baloo';
+  src: url('/fonts/Baloo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: aquamarine;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Baloo', sans-serif;
+  font-size: 30px;
+}
+
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: auto;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  color: blue;
+}
+
+nav .logo img {
+  padding: 20px 0 0 0;
+  height: 60px;
+  width: auto;
+  align-self: center;
+}
+
+nav .logo img:hover {
+  content: url("/img/logo_sapbaohapcoc_hover.png");
+}
+
+main {
+  margin-top: 60px;
+  padding: 1em;
+}
+
+.post-preview {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
