@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", async () => {
   // Fetch the list of posts dynamically
-  const response = await fetch("/posts/posts.json");
+  const response = await fetch("/posts/live-server/posts.json");
   const posts = await response.json();
   const postsContainer = document.getElementById("posts");
 
-  // Display the 3 latest posts
-  const latestPosts = posts.slice(0, 3);
-  for (const postUrl of latestPosts) {
+  // Display all posts sequentially
+  for (const postUrl of posts) {
     const postResponse = await fetch(postUrl);
     const data = await postResponse.text();
     const parser = new DOMParser();
@@ -17,9 +16,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const postElement = document.createElement("div");
     postElement.classList.add("post-preview");
     postElement.innerHTML = `
-      <h2><a href="${postUrl}">${title}</a></h2>
-      <p>${content}</p>
-    `;
+          <h2><a href="${postUrl}">${title}</a></h2>
+          <p>${content}</p>
+        `;
     postsContainer.appendChild(postElement);
   }
 });

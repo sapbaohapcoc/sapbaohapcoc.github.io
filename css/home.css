@@ -1,0 +1,9 @@
+h1.bigtitle {
+  font-size: 60px;
+  color: rgb(0, 0, 0);
+  margin: 30px;
+}
+
+div.bigtitle {
+  background-color: rgb(0, 128, 128);
+}
