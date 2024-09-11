@@ -1,5 +1,5 @@
 function loadCover() {
-  fetch("/html/misc/mobile-cover.html")
+  fetch("/html/partials/mobile-cover.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("mobile-cover").innerHTML = data;

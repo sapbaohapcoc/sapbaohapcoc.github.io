@@ -58,12 +58,12 @@ main {
   padding-bottom: 1em;
 }
 
-.mobile-cover {
+#mobile-cover {
   display: none; /* Hide by default */
 }
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
-  .mobile-cover {
+  #mobile-cover {
     display: grid;
     place-items: center; /* Show on mobile devices in portrait orientation */
     position: absolute; /* Position it as a topmost layer */
@@ -76,7 +76,7 @@ main {
     background-color: black;
   }
 
-  .mobile-cover h1 {
+  #mobile-cover h1 {
     color: whitesmoke;
   }
 }
