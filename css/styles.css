@@ -6,55 +6,53 @@
   font-style: normal;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
-    background-image: url("/img/background/1725959070195.png"); /* Replace with your image URL */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-attachment: fixed; /* Make the background image fixed */
-    background-size: cover; /* Ensure the image covers the entire viewport */
-    background-position: center; /* Center the image */
-    position: relative;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-image: url("/img/background/1725959070195.png"); /* Replace with your image URL */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-attachment: fixed; /* Make the background image fixed */
+  background-size: cover; /* Ensure the image covers the entire viewport */
+  background-position: center; /* Center the image */
+  position: relative;
+}
 
-  body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
-    z-index: 1; /* Ensure the overlay is above the background image */
-  }
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 1; /* Ensure the overlay is above the background image */
+}
 
-  .content {
-    position: relative;
-    z-index: 2; /* Ensure the content is above the overlay */
-    color: whitesmoke; /* Adjust text color for better readability */
-  }
+.content {
+  position: relative;
+  z-index: 2; /* Ensure the content is above the overlay */
+  color: whitesmoke; /* Adjust text color for better readability */
+}
 
-  body a {
-    text-decoration: none;
-    color: black;
-    transition: transform 0.3s ease;
-    display: inline-block;
-  }
+body a {
+  text-decoration: none;
+  color: black;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
 
-  body a:hover {
-    transform: scale(1.05);
-  }
+body a:hover {
+  transform: scale(1.05);
+}
 
-  main {
-    margin-top: 60px;
-    padding: 1em;
-  }
+main {
+  margin-top: 60px;
+  padding: 1em;
+}
 
-  .post-preview {
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 1em;
-    padding-bottom: 1em;
-  }
+.post-preview {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
 }
