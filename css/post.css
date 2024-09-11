@@ -4,7 +4,7 @@ article {
 }
 
 .main_part {
-  size: 36px;
+  text-shadow: 0 0 3px rgb(128, 128, 128), 0 0 6px rgb(255, 255, 255);
 }
 
 h1 {
@@ -83,4 +83,12 @@ ul.post li {
 img.center {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.green {
+  color: rgb(0, 255, 0);
+}
+
+.underline {
+  text-decoration-line: underline;
 }
