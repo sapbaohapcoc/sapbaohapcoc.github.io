@@ -42,7 +42,8 @@ nav .menu a {
 
 nav .menu-icon {
   display: none;
-  font-size: 24px;
+  font-size: 72px;
+  text-align: center;
   color: black;
   cursor: pointer;
 }
@@ -68,13 +69,12 @@ nav .menu-icon {
 
 /* Responsive styles */
 @media (max-width: 480px) {
-  .navbar .menu {
+  nav .menu {
     display: none;
   }
 
-  .navbar .menu-icon {
+  nav .menu-icon {
     display: block;
-    size: 72px;
   }
 }
 
