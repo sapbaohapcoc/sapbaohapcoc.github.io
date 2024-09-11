@@ -40,6 +40,7 @@ body a {
   color: black;
   transition: transform 0.3s ease;
   display: inline-block;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 1);
 }
 
 body a:hover {
@@ -55,4 +56,28 @@ main {
   border-bottom: 1px solid #ccc;
   margin-bottom: 1em;
   padding-bottom: 1em;
+}
+
+.mobile-cover {
+  display: none; /* Hide by default */
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  .mobile-cover {
+    display: grid;
+    place-items: center; /* Show on mobile devices in portrait orientation */
+    position: absolute; /* Position it as a topmost layer */
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999; /* Ensure it is on top */
+    text-align: center;
+    : center;
+    background-color: black;
+  }
+
+  .mobile-cover h1 {
+    color: whitesmoke;
+  }
 }
