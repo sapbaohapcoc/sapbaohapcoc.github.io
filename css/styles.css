@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  background-image: url("/img/1725959070195.png"); /* Replace with your image URL */
+  background-image: url("/img/background/1725959070195.png"); /* Replace with your image URL */
   background-repeat: no-repeat; /* Prevent the image from repeating */
   background-attachment: fixed; /* Make the background image fixed */
   background-size: cover; /* Ensure the image covers the entire viewport */
@@ -38,9 +38,6 @@ body::before {
 body a {
   text-decoration: none;
   color: black;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 1),
-    0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.8),
-    0 0 40px rgba(255, 255, 255, 0.7);
   transition: transform 0.3s ease;
   display: inline-block;
 }

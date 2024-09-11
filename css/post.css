@@ -1,8 +1,6 @@
 article {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 1),
-    0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.8),
-    0 0 40px rgba(255, 255, 255, 0.7);
   color: black;
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 .main_part {
@@ -17,7 +15,8 @@ h1 {
 
 h2 {
   font-size: 40px;
-  color: blue;
+  text-shadow: none;
+  background-color: rgba(127, 255, 212, 0.25);
   font-weight: bold;
 }
 
@@ -28,6 +27,7 @@ h2 {
 h3 {
   font-size: 32px;
   font-style: italic;
+  margin-left: 30px;
 }
 
 .champbox_nameimg img {
@@ -44,6 +44,7 @@ h3 {
 }
 
 .champbox_nameimg {
+  background-color: rgba(255, 255, 255, 0.25);
   margin-top: -15px;
   margin-bottom: 15px;
 }
@@ -51,4 +52,35 @@ h3 {
 .contentbox {
   line-height: 1.5;
   font-weight: 550;
+  margin-left: 60px;
+}
+
+#normal-link {
+  color: blue;
+  text-decoration: none;
+  background-color: whitesmoke;
+  transform: none;
+}
+
+ul.post {
+  --ul-margin-left: 60px;
+}
+
+ul.post li {
+  margin-left: calc(var(--ul-margin-left) + 15px);
+  line-height: 2;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 50%; /* Adjust the width as needed */
+}
+
+img.center {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
