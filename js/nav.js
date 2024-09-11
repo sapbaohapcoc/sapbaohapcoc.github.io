@@ -1,5 +1,5 @@
 function loadNav() {
-  fetch("/partials/nav.html")
+  fetch("/html/partials/nav.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("nav-placeholder").innerHTML = data;
