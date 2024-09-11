@@ -43,7 +43,6 @@ nav .menu a {
 nav .menu-icon {
   display: none;
   font-size: 72px;
-  text-align: center;
   color: black;
   cursor: pointer;
 }
@@ -51,11 +50,11 @@ nav .menu-icon {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 50px;
-  right: 10px;
+  top: 77px;
+  right: 0px;
   background-color: #333;
   flex-direction: column;
-  width: 150px;
+  width: auto;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
