@@ -49,6 +49,27 @@ h3 {
   margin-bottom: 15px;
 }
 
+.minichampbox img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 50px;
+  height: 75px;
+  width: auto;
+}
+
+.minichampbox h4 {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 20px;
+  font-size: 24px;
+}
+
+.minichampbox {
+  background-color: rgba(255, 255, 255, 0.25);
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+
 .contentbox {
   line-height: 1.5;
   font-weight: 550;
@@ -77,7 +98,8 @@ ul.post li {
   margin-right: auto;
   padding-top: 15px;
   padding-bottom: 15px;
-  width: 50%; /* Adjust the width as needed */
+  width: max-content;
+  /* Adjust the width as needed */
 }
 
 img.center {
@@ -87,6 +109,11 @@ img.center {
 
 .content .HP {
   color: #1f995c;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.content .MP {
+  color: cadetblue;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
