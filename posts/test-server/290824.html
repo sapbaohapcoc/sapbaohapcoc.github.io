@@ -21,7 +21,7 @@
         <article>
           <h1>Update Server Thử Nghiệm 29/8/2024</h1>
           <p class="summary">
-            <em>Tiêu điểm cập nhật:</em> Đại trùng tu chuẩn bị cho S37, vui lòng chờ...
+            <em>Tiêu điểm cập nhật:</em> Đại trùng tu chuẩn bị cho S37, bao gồm những chỉnh sửa được đề cập dưới đây, cùng với một số thay đổi không đáng kể về khía cạnh thẩm mỹ của trò chơi...
           </p>
         </article>
         <br />
@@ -56,7 +56,7 @@
               <em>Tinh Linh Cỏ Dại có thể hợp thể nhằm tăng cấp khi di chuyển lại gần với nhau, tối đa tăng tới 5 cấp</em>
               <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/345be338eeadff5670305874be3f59b9/0/?width=961&height=495" alt="Demo Triệu Hoán 3">
             </p>
-            <h3>Tối ưu hoá cơ chế cổng dịch chuyển:</h3>
+            <h3 id="teleport">Tối ưu hoá cơ chế cổng dịch chuyển:</h3>
             <p class="contentbox">
               <em>Tinh Linh Không Gian sẽ trở thành chìa khoá để mở ra cổng dịch chuyển, và sẽ liên tục hồi sinh trong 4 phút đầu trận.</em>
               <br><br>
@@ -413,178 +413,401 @@
                 </thead>
                 <tbody id="white">
                   <tr>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero/liushan.webp" alt="Lưu Thiện">
-                        <span id="text">Lưu Thiện</span>
-                      </div>
+                    <td class="champbox50">
+                      <img src="/img/hero/liushan.webp" alt="Lưu Thiện">
+                      <span id="text">Lưu Thiện</span>                
                     </td>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero_skill/liushan_1.webp" alt="Chiêu 1">
-                        <span id="text">Chiêu 1<br>(khi chưa tung đòn đánh cường hoá)</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/liushan_1.webp" alt="Chiêu 1">
+                      <span id="text">Chiêu 1<br>(khi chưa tung đòn đánh cường hoá)</span>                                      
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero/lubu.webp" alt="Lữ Bố">
-                        <span id="text">Lữ Bố</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/lubu.webp" alt="Lữ Bố">
+                      <span id="text">Lữ Bố</span>                      
                     </td>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero_skill/lubu_ulti.webp" alt="Chiêu cuối">
-                        <span id="text">Chiêu cuối</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/lubu_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu cuối</span>                      
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero/yuange.webp" alt="Nguyên Ca">
-                        <span id="text">Nguyên Ca</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/yuange.webp" alt="Nguyên Ca">
+                      <span id="text">Nguyên Ca</span>                      
                     </td>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero_skill/yuange_1_1.webp" alt="Chiêu 1.1">
-                        <img src="/img/hero_skill/yuange_1_2.png" alt="Chiêu 1.2">
-                        <span id="text">Chiêu 1</span>
-                      </div>
+                    <td class="champbox50">                    
+                      <img src="/img/hero_skill/yuange_1_1.webp" alt="Chiêu 1.1">
+                      <img src="/img/hero_skill/yuange_1_2.png" alt="Chiêu 1.2">
+                      <span id="text">Chiêu 1</span>                      
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero/angela.webp" alt="Angela">
-                        <span id="text">Angela</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/angela.webp" alt="Angela">
+                      <span id="text">Angela</span>                     
                     </td>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero_skill/angela_ulti.webp" alt="Chiêu cuối">
-                        <span id="text">Chiêu cuối</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/angela_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu cuối</span>                      
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero/jiangziya.webp" alt="Khương Tử Nha">
-                        <span id="text">Khương Tử Nha</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/jiangziya.webp" alt="Khương Tử Nha">
+                      <span id="text">Khương Tử Nha</span>                      
                     </td>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero_skill/jiangziya_0.webp" alt="Phong thần">
-                        <span id="text">Phong thần bằng Nội tại</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/jiangziya_0.webp" alt="Phong thần">
+                      <span id="text">Nội tại<br>(trong khi đang Phong thần)</span>                      
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero/doria.webp" alt="Doria">
-                        <span id="text">Doria</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/doria.webp" alt="Doria">
+                      <span id="text">Doria</span>                      
                     </td>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero_skill/doria_ulti.webp" alt="Chiêu cuối">
-                        <span id="text">Chiêu cuối</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/doria_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu cuối</span>                    
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero/zhangfei.webp" alt="Trương Phi">
-                        <span id="text">Trương Phi</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/zhangfei.webp" alt="Trương Phi">
+                      <span id="text">Trương Phi</span>                      
                     </td>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero_skill/zhangfei_ulti.webp" alt="Chiêu cuối">
-                        <span id="text">Chiêu cuối</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/zhangfei_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu cuối</span>                      
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero/genghiskhan.webp" alt="Thành Cát Tư Hãn">
-                        <span id="text">Thành Cát Tư Hãn</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/genghiskhan.webp" alt="Thành Cát Tư Hãn">
+                      <span id="text">Thành Cát Tư Hãn</span>                      
                     </td>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero_skill/genghiskhan_ulti.webp" alt="Chiêu cuối">
-                        <span id="text">Chiêu cuối</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/genghiskhan_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu cuối</span>                      
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero/nezha.webp" alt="Natra">
-                        <span id="text">Natra</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/nezha.webp" alt="Natra">
+                      <span id="text">Natra</span>                     
                     </td>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero_skill/nezha_2.webp" alt="Chiêu 2">
-                        <img src="/img/hero_skill/nezha_ulti.webp" alt="Chiêu cuối">
-                        <span id="text">Chiêu 2 & Chiêu cuối</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/nezha_2.webp" alt="Chiêu 2">
+                      <img src="/img/hero_skill/nezha_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu 2 & Chiêu cuối</span>                     
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero/donghuangtaiyi.webp" alt="Đông Hoàng Thái Nhất">
-                        <span id="text">Đông Hoàng Thái Nhất</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/donghuangtaiyi.webp" alt="Đông Hoàng Thái Nhất">
+                      <span id="text">Đông Hoàng Thái Nhất</span>                      
                     </td>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero_skill/donghuangtaiyi_ulti.webp" alt="Chiêu cuối">
-                        <span id="text">Chiêu cuối</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/donghuangtaiyi_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu cuối</span>                     
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero/daqiao.webp" alt="Đại Kiều">
-                        <span id="text">Đại Kiều</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/daqiao.webp" alt="Đại Kiều">
+                      <span id="text">Đại Kiều</span>                      
                     </td>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero_skill/daqiao_ulti.webp" alt="Chiêu cuối">
-                        <span id="text">Đang vận sức để dịch chuyển</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/daqiao_2.webp" alt="Chiêu 2">
+                      <img src="/img/hero_skill/daqiao_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu 2 & Chiêu cuối<br>(trong khi đang vận sức để dịch chuyển)</span>                      
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero/huangzhong.webp" alt="Hoàng Trung">
-                        <span id="text">Hoàng Trung</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/huangzhong.webp" alt="Hoàng Trung">
+                      <span id="text">Hoàng Trung</span>                      
                     </td>
-                    <td>
-                      <div class="champbox50">
-                        <img src="/img/hero_skill/huangzhong_ulti.webp" alt="Chiêu cuối">
-                        <span id="text">Chiêu cuối</span>
-                      </div>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/huangzhong_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu cuối</span>                
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/shenmengxi.webp" alt="Thẩm Mộng Khê">
+                      <span id="text">Thẩm Mộng Khê</span>                      
+                    </td>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/shenmengxi_2.webp" alt="Chiêu 2">
+                      <span id="text">Chiêu 2<br>(khi chưa tái kích hoạt)</span>                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/mingshiyin.webp" alt="Minh Thế Ẩn">
+                      <span id="text">Minh Thế Ẩn</span>                     
+                    </td>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/mingshiyin_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu cuối</span>                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/peiqinhu.webp" alt="Bùi Cầm Hổ">
+                      <span id="text">Bùi Cầm Hổ</span>                 
+                    </td>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/peiqinhu_2_2.webp" alt="Chiêu 2 dạng Hổ">
+                      <span id="text">Chiêu 2 dạng Hổ</span>                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/yao.webp" alt="Yao">
+                      <span id="text">Yao</span>                      
+                    </td>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/yao_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu cuối<br>(trong khi đang bay tới chỗ mục tiêu)</span>                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/lixin.webp" alt="Lý Tín">
+                      <span id="text">Lý Tín</span>                      
+                    </td>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/lixin_ulti_1.webp" alt="Hoá Quỷ">
+                      <img src="/img/hero_skill/lixin_ulti_2.webp" alt="Hoá Thần">
+                      <span id="text">2 Chiêu cuối (trong khi biến hình)</span>                  
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/haiyue.webp" alt="Hải Nguyệt">
+                      <span id="text">Hải Nguyệt</span>                     
+                    </td>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/haiyue_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu cuối</span>                  
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="champbox50">                      
+                      <img src="/img/hero/mengtian.webp" alt="Mông Điềm">
+                      <span id="text">Mông Điềm</span>                      
+                    </td>
+                    <td class="champbox50">              
+                      <img src="/img/hero_skill/mengtian_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu cuối</span>                
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="champbox50">               
+                      <img src="/img/hero/sangqi.webp" alt="Tang Khởi">
+                      <span id="text">Tang Khải</span>                      
+                    </td>
+                    <td class="champbox50">                      
+                      <img src="/img/hero_skill/sangqi_2.webp" alt="Chiêu 2">
+                      <img src="/img/hero_skill/sangqi_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu 2 & Chiêu cuối (khi đang bay)</span>                  
                     </td>
                   </tr>
                 </tbody>
               </table>
             </p>
+            <h3>Thêm chỉ báo tầm xa của đòn đánh có hiệu ứng di chuyển:</h3>
+            <p class="contentbox">
+              Với các đòn đánh kèm theo hiệu ứng đột kích/lao tới mục tiêu, sẽ có thêm vòng tròn chỉ báo tầm xa của đòn đánh (hiện đã có sẵn trên đòn đánh thứ nhất trong combo 3 đòn của Á Liên, có thể tham khảo)
+              <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/47ad5eb4975e14949c59a965e21f3cb2/0/?width=487&height=332" alt="atk-range">
+              <br>
+              Các tướng được chỉnh sửa thêm cơ chế này:
+              <ul class="post">
+                <li class="champbox75">                  
+                  <img src="/img/hero/miyamotomusashi.webp" alt="Miyamoto Musashi">
+                  <span id="text">Miyamoto Musashi</span>                 
+                </li>
+                <li class="champbox75">
+                  <img src="/img/hero/simayi.webp" alt="Tư Mã Ý">
+                  <span id="text">Tư Mã Ý</span>
+                </li>
+                <li class="champbox75">
+                  <img src="/img/hero/shiranuimai.webp" alt="Shiranui Mai">
+                  <span id="text">Shiranui Mai</span>
+                </li>
+                <li class="champbox75">
+                  <img src="/img/hero/dongfangyao.webp" alt="Diệu">
+                  <span id="text">Diệu</span>
+                </li>
+              </ul>
+            </p>
+            <h3>Hiệu ứng phân biệt ảnh ảo với bản thể thật trên bản đồ nhỏ:</h3>
+            <p class="contentbox">
+              Ảnh ảo do Kính tạo ra sau khi dùng chiêu sẽ có biểu tượng sẫm màu hơn
+              <br>
+              <img class="center" src="https://img.crawler.qq.com/cfwebcap/0/e758f3628a4824fe67ee21fa81e9dcbf/0/?width=309&height=312" alt="mirror-1">
+              Biểu tượng của Đại Kiều tại vị trí đích đến của thao tác dịch chuyển cũng được coi là ảo ảnh, đánh dấu sẫm màu hơn
+              <br>
+              <img class="center" src="https://img.crawler.qq.com/cfwebcap/0/d1aab13f9538d07757b0eb1012519cf6/0/?width=309&height=312" alt="mirror-2">
+              Bản thân Hải Nguyệt và Tướng bị đưa vào kết giới cùng cô cũng được coi là ảo ảnh trong thời gian hiệu lực, đánh dấu sẫm màu hơn
+              <br>
+              <img class="center" src="https://img.crawler.qq.com/cfwebcap/0/96561123d04ec07a29c0c2b46255a27b/0/?width=308&height=312" alt="mirror-3">
+            </p>
+            <h3>Hiệu ứng tổng sát thương tích luỹ:</h3>
+            <p class="contentbox">
+              Với một số chiêu thức có khả năng gây sát thương theo thời gian, thêm chỉ báo tổng sát thương do chiêu thức này gây ra
+              <br>
+              <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/9327feac13de3197777a2493e0a4dbe9/0/?width=345&height=273" alt="stackdmg">
+              Các chiêu thức được chỉnh sửa:
+              <table class="norm">
+                <thead id="aqua">
+                  <tr>
+                    <th>Tướng</th>
+                    <th>Chiêu thức</th>
+                  </tr>
+                </thead>
+                <tbody id="white">
+                  <tr>
+                    <td class="champbox50">
+                      <img src="/img/hero/zhongwuyan.webp" alt="Chung Vô Diệm">
+                      <span id="text">Chung Vô Diệm</span>
+                    </td>
+                    <td class="champbox50">
+                      <img src="/img/hero_skill/zhongwuyan_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu cuối</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="champbox50">
+                      <img src="/img/hero/miyue.webp" alt="Mị Nguyệt">
+                      <span id="text">Mị Nguyệt</span>
+                    </td>
+                    <td class="champbox50">
+                      <img src="/img/hero_skill/miyue_2.webp" alt="Chiêu 2">
+                      <span id="text">Chiêu 2</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="champbox50">
+                      <img src="/img/hero/dharma.webp" alt="Đạt Ma">
+                      <span id="text">Đạt Ma</span>
+                    </td>
+                    <td class="champbox50">
+                      <img src="/img/hero_skill/dharma_2.webp" alt="Chiêu 2">
+                      <span id="text">Chiêu 2</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="champbox50">
+                      <img src="/img/hero/jiangziya.webp" alt="Khương Tử Nha">
+                      <span id="text">Khương Tử Nha</span>
+                    </td>
+                    <td class="champbox50">
+                      <img src="/img/hero_skill/jiangziya_1.webp" alt="Chiêu 1">
+                      <span id="text">Chiêu 1</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="champbox50">
+                      <img src="/img/hero/liyuanfang.webp" alt="Lý Nguyên Phương">
+                      <span id="text">Lý Nguyên Phương</span>
+                    </td>
+                    <td class="champbox50">
+                      <img src="/img/hero_skill/liyuanfang_ulti.webp" alt="Chiêu cuối">
+                      <span id="text">Chiêu cuối</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </p>
+            <h3>Thay đổi thanh máu của con rối thành thanh máu Tướng, cho phép hiển thị các trạng thái như hồi Máu/bị đốt Máu/lá chắn…</h3>
+            <img class="contentbox center75" src="https://img.crawler.qq.com/cfwebcap/0/26305f089a27a588a86b35e36eb2ee68/0/?width=945&height=534" alt="puppet">
+            <h3>Thêm tính năng chia sẻ cài đặt giao diện nút bấm:</h3>
+            <p class="contentbox">
+              Bạn có thể lựa chọn chia sẻ giao diện nút bấm với bạn bè (tương tự chia sẻ khoảnh khắc, thành tích…) nhằm giúp thiết lập nhanh chóng
+              <img src="https://img.crawler.qq.com/cfwebcap/0/1339d0b6867c502321a8a2afec083667/0/?width=945&height=532" class="center75" alt="items"> 
+            </p>
+          <h2>Thêm thông báo thành tích độc quyền từng Tướng:</h2>
+          <p class="contentbox">
+            Các thành tích này sẽ hiển thị tương tự như thông báo ăn mạng/hạ gục (xin phép skip vì không liên quan nhiều đến cơ chế game)
+            <br><br>
+            Dưới đây là những vị Tướng có thêm thông báo độc quyền: Triệu Vân, Phi, Đại Tư Mệnh, Mã Siêu, Ngu Cơ, Thượng Quan Uyển Nhi, Chân Lạc
+          </p>
+          <h2>Điều chỉnh Chúng Tinh Hạp Cốc (map 10v10):</h2>
+            <h3>Nguyên Sơ Thí Luyện (cơ chế hỗ trợ lật kèo cho team đang yếu thế) được cải tiến, mở đến bậc thứ 5</h3>
+            <h3>Thêm chế độ biểu tượng bùa lợi ghép:</h3>
+            <p class="contentbox">
+              Nhằm hạn chế việc giao diện có quá nhiều biểu tượng dẫn đến che khuất tầm nhìn, các biểu tượng bùa lợi của Bùa Xanh, Bùa Đỏ và Bùa Vàng giờ đây sẽ gộp vào nhau
+              <img class="center" src="https://img.crawler.qq.com/cfwebcap/0/5f375ab4c673338e4e300d2ba6edbf88/0/?width=124&height=106" alt="buffs">
+            </p>
+            <h3>Nâng cấp ngoại hình Bùa Vàng:</h3>
+            <img class="contentbox center75" src="https://img.crawler.qq.com/cfwebcap/0/3b4c142e5a9df893e9b0ca6f6fd7ef6f/0/?width=945&height=525" alt="goldenbuff">
+            <h3>Cơ chế cổng dịch chuyển mới:</h3>
+            <p class="contentbox">
+              Tương tự map 5v5, có thể ấn vào <a id="normal-link" href="#teleport">đây</a> để xem lại
+            </p>
+            <h3>Các tính năng khác:</h3>
+            <ul class=" post">
+              <li>Minimap giờ có thể hiển thị đủ 10 người team mình</li>
+              <li>Chế độ xem trận đấu 10v10 được ra mắt, hoạt động tương tự 5v5</li>
+              <li>Mở chức năng tạo phòng đấu 10v10</li>
+              <li>Thêm nút “rủ lập team cùng” ở màn hình tổng kết thành tích, nhanh chóng rủ các đồng đội cùng nhau chơi ván tiếp theo</li>
+              <li>Thêm bảng thống kê thông số 10v10</li>
+              <li>Quy tắc xếp rank điều chỉnh cho tương tự với 5v5, đồng thời giảm số điểm tinh tuý yêu cầu tích luỹ để quy đổi ra 1 sao:</li>
+              <ul class="post">
+                <li><span class="underline">Cũ:</span> Mọi bậc rank đều theo tỷ lệ 100 điểm tinh tuý = 1 sao</li>
+                <li><span class="underline">Mới:</span> Xem trong bảng sau:</li>
+                <table class="norm">
+                  <thead id="aqua">
+                    <tr>
+                      <th>Rank</th>
+                      <th>Mức điểm yêu cầu để quy đổi ra 1 sao</th>
+                    </tr>
+                  </thead>
+                  <tbody id="white">
+                    <tr>
+                      <td>Đồng & Bạc</td>
+                      <td>60</td>
+                    </tr>
+                    <tr>
+                      <td>Vàng & Bạch Kim</td>
+                      <td>70</td>
+                    </tr>
+                    <tr>
+                      <td>Kim Cương</td>
+                      <td>80</td>
+                    </tr>
+                    <tr>
+                      <td>Tinh Diệu</td>
+                      <td>90</td>
+                    </tr>
+                    <tr>
+                      <td>Vương Giả trở lên</td>
+                      <td>100</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </ul>
+            </ul>
+          <h2>Tối ưu hoá giao diện chuẩn bị trước trận:</h2>
+          <p class="contentbox">
+            Ngoài biểu tượng nhỏ trên góc biểu tượng trang bị, bây giờ khi nhấn giữ vào một trang bị trong danh sách, sẽ hiện ra bảng thông số trang bị, kèm theo tag bên cạnh tên nhằm thông báo những chỉnh sửa mà trang bị này mới phải nhận trong bản cập nhật gần nhất
+            <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/af42ec0e3c12b8c73ee99425f113cd86/0/?width=945&height=438" alt="items-2">
+          </p>
+          <h2>Tối ưu hoá giao diện tường nhà:</h2>
+          <p class="contentbox">
+            Giờ trong mục hồ sơ cá nhân sẽ hiển thị đồng thời rank của các chế độ chơi khác thay vì chỉ riêng 5v5
+            <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/ce023c1508da56c1dc573e16991770b0/0/?width=945&height=434" alt="wall">
+          </p>
+          <h2>Và còn một số chỉnh sửa mang tính thẩm mỹ khác, xin phép được lược bỏ vì không ảnh hưởng đến gameplay!</h2>
+          <p class="contentbox">
+            <span class="center">Đó giờ xong patch rồi đó, làm khùng làm điên gì làm đi</span>
+            <img class="center75" src="/img/misc/Bercouli-but-dirty-old-man.jpg" alt="Cái mặt dâm quá ck ơi">
+          </p>
         </article>
       </main>
     </div>

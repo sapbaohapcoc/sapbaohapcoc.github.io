@@ -5,6 +5,8 @@ table.norm {
 
 table.norm th, table.norm td {
     border: 1px solid black;
+    text-align: center;
+    padding: 5px;
 }
 
 thead#aqua th {
@@ -13,18 +15,4 @@ thead#aqua th {
 
 tbody#white td {
     background-color: whitesmoke;
-}
-
-.champbox50 img {
-    display: inline-block;
-    vertical-align: middle;
-    height: 50px;
-    width: auto;
-    padding: 10px;
-}
-
-.champbox50 #text {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 10px;
 }

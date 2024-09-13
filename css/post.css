@@ -3,8 +3,9 @@ article {
   background-color: rgba(255, 255, 255, 0.25);
 }
 
-.main_part {
-  text-shadow: 0 0 3px rgb(128, 128, 128), 0 0 6px rgb(255, 255, 255);
+article.main_part {
+  color: whitesmoke;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 h1 {
@@ -15,7 +16,6 @@ h1 {
 
 h2 {
   font-size: 40px;
-  text-shadow: none;
   background-color: rgba(127, 255, 212, 0.25);
   font-weight: bold;
 }
@@ -187,4 +187,33 @@ img.center {
 
 h4.title {
   margin-left: 60px;
+}
+
+.champbox50 img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 50px;
+  width: auto;
+  padding: 10px;
+}
+
+.champbox50 #text {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+.champbox75 img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 75px;
+  width: auto;
+  padding: 10px;
+}
+
+.champbox75 #text {
+  display: inline-block;
+  font-weight: 900;
+  vertical-align: middle;
+  margin: 0 15px;
 }
