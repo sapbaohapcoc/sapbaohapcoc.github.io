@@ -10,9 +10,15 @@ table.norm th, table.norm td {
 }
 
 thead#aqua th {
+    color: black;
+    text-shadow: none;
     background-color: aqua;
 }
 
 tbody#white td {
     background-color: whitesmoke;
+}
+
+tbody#gray td {
+    background-color: grey;
 }
