@@ -30,6 +30,8 @@ body::before {
 }
 
 .content {
+  display: block;
+  width: 100%;
   position: relative;
   z-index: 2; /* Ensure the content is above the overlay */
   color: whitesmoke; /* Adjust text color for better readability */
@@ -66,8 +68,8 @@ main {
   #mobile-cover {
     display: grid;
     place-items: center; /* Show on mobile devices in portrait orientation */
-    position: absolute; /* Position it as a topmost layer */
-    top: -60px;
+    position: fixed; /* Position it as a topmost layer */
+    top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
