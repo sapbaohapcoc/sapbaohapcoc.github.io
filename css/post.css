@@ -76,6 +76,13 @@ h3 {
   margin-left: 60px;
 }
 
+.minicontentbox {
+  line-height: 1.5;
+  font-weight: 550;
+  margin-left: 90px;
+  margin-right: 30px;
+}
+
 #normal-link {
   color: blue;
   text-decoration: none;
@@ -100,6 +107,15 @@ ul.post li {
   padding-bottom: 15px;
   width: max-content;
   /* Adjust the width as needed */
+}
+
+.center75 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 75%;
 }
 
 img.center {
@@ -159,4 +175,15 @@ img.center {
 
 .underline {
   text-decoration-line: underline;
+}
+
+#center-intro {
+  text-align: center;
+  display: block;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+h4.title {
+  margin-left: 60px;
 }

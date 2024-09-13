@@ -1,0 +1,30 @@
+table.norm {
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+table.norm th, table.norm td {
+    border: 1px solid black;
+}
+
+thead#aqua th {
+    background-color: aqua;
+}
+
+tbody#white td {
+    background-color: whitesmoke;
+}
+
+tbody.imgtext td img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100px;
+    width: auto;
+    padding: 10px;
+}
+
+tbody.imgtext td .text {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 10px;
+}
