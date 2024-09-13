@@ -15,16 +15,16 @@ tbody#white td {
     background-color: whitesmoke;
 }
 
-tbody.imgtext td img {
+.champbox50 img {
     display: inline-block;
     vertical-align: middle;
-    height: 100px;
+    height: 50px;
     width: auto;
     padding: 10px;
 }
 
-tbody.imgtext td .text {
+.champbox50 #text {
     display: inline-block;
     vertical-align: middle;
-    padding-left: 10px;
+    margin: 0 10px;
 }
