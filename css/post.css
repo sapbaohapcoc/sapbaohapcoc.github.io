@@ -30,20 +30,20 @@ h3 {
   margin-left: 30px;
 }
 
-.champbox_nameimg img {
+.champbox100 img {
   display: inline-block;
   vertical-align: middle;
   height: 100px;
   width: auto;
 }
 
-.champbox_nameimg h3 {
+.champbox100 h3 {
   display: inline-block;
   vertical-align: middle;
   padding-left: 20px;
 }
 
-.champbox_nameimg {
+.champbox100 {
   background-color: rgba(255, 255, 255, 0.25);
   margin-top: -15px;
   margin-bottom: 15px;
