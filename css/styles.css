@@ -71,7 +71,7 @@ main {
     position: fixed; /* Position it as a topmost layer */
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     z-index: 10000; /* Ensure it is on top */
     text-align: center;
