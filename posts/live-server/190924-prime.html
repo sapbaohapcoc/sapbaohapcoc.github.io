@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/navbar.css" />
     <link rel="stylesheet" href="/css/post.css" />
+    <link rel="stylesheet" href="/css/tables.css" />
   </head>
   <body>
     <div id="mobile-cover"></div>
@@ -63,7 +64,7 @@
                 Tinh Linh Cỏ Dại có thể hợp thể nhằm tăng cấp khi di chuyển lại gần với nhau, tối đa tăng tới 5 cấp
                 <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/345be338eeadff5670305874be3f59b9/0/?width=961&height=495" alt="Demo Thảo Linh 3">
               </p>
-            <h3>Tối ưu hoá cơ chế cổng dịch chuyển:</h3>
+            <h3 id="teleport">Tối ưu hoá cơ chế cổng dịch chuyển:</h3>
               <p class="contentbox">
                 <em>Tinh Linh Không Gian sẽ trở thành chìa khoá để mở ra cổng dịch chuyển, và sẽ liên tục hồi sinh trong 4 phút đầu trận.</em>
                 <br><br>
@@ -320,9 +321,727 @@
               </p>
             <h3>Thay đổi biểu tượng chia lane:</h3>
               <p class="contentbox">
-                Theo thứ tự từ trái sang phải: Đường Phát Triển/Đường Rồng, Đường Giữa, Đường Đối Kháng/Đường Tà Thần, Rừng, Hỗ Trợ, Toàn năng (lane nào cũng chơi)
+                Theo thứ tự từ trái sang phải: Đường Phát Triển/Đường Bot, Đường Giữa/Đường Mid, Đường Đối Kháng/Đường Top, Rừng, Hỗ Trợ, Toàn năng (lane nào cũng chơi)
                 <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/19c80f5fa07b24bc9c1aa263c4e7e027/0/?width=945&height=438" alt="role-icon-update">
               </p>
+            <h3>Mở cửa toàn thời gian chế độ ghép trận theo lane:</h3>
+              <p class="contentbox">
+                Hiện tại chế độ này chỉ mở từ 12h-18h mỗi ngày ở mức rank Kim Cương trở lên. Từ bản cập nhật tới đây, chế độ này sẽ mở toàn thời gian cho cả đấu rank thường và đấu Thượng Đỉnh, ở mọi bậc rank, nhằm đảm bảo người chơi được đi theo đúng lane mong muốn.
+                <br><br>
+                Người chơi từ rank Vương Giả trở xuống sẽ chỉ được chọn 1 lane.              
+                <img src="/img/misc/retouch_2024082915430054.jpg" class="center75" alt="rank-1">
+                Người chơi từ rank Vương Giả trở lên sẽ được chọn 2 lane, 1 chính 1 phụ. Ưu tiên giảm khả năng phải chơi lane phụ xuống thấp nhất có thể, đồng thời hạn chế tình trạng liên tục phải chơi lane phụ.
+                <br><br>
+                Người chơi đa-zi-năng cũng có thể lựa chọn mục thứ 6, đi lane bất kỳ. Hệ thống vẫn sẽ ưu tiên ghép trận để bạn được chơi lane thuận tay nhất, dựa trên chiến tích của bạn.
+              </p>
+            <h3>Thay đổi toàn diện trong giai đoạn cấm chọn:</h3>
+              <p class="contentbox">
+                Giao diện cấm chọn của mọi bậc rank giờ đây sẽ đồng nhất với nhau, theo thể thức của rank cấm chọn cũ:
+                <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/c4220b48c03bda1bb824e34079996a24/0/?width=945&height=436" alt="banpick-UI">
+                <h4 class="title">Đối với rank Kim Cương trở xuống:</h4>
+                  <p class="minicontentbox">
+                    Hai bên đồng thời pick Tướng, song chỉ được pick theo lane mà mình đã chọn. Thứ tự sắp xếp Tướng cũng được thay đổi tuỳ theo tần suất sử dụng của người chơi.
+                    <img src="https://img.crawler.qq.com/cfwebcap/0/33fb3259679fd84a87a245e313acda46/0/?width=945&height=435" class="center75" alt="banpick-UI-low">
+                  </p>
+                <h4 class="title">Đối với rank Kim Cương trở lên:</h4>
+                  <p class="minicontentbox">
+                    Thêm cơ chế nhá hàng Tướng định chọn, giúp đồng đội biết được bạn dự định pick Tướng nào, từ đó có thể sắp xếp đội hình sao cho hợp lý
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/1bb1c1501fae9db78249c21dff9458c2/0/?width=2390&height=1104" alt="banpick-UI-high">
+                  </p>
+                <h4 class="title">Đối với đấu Thượng Đỉnh:</h4>
+                  <p class="minicontentbox">
+                    Tăng số slot cấm Tướng từ 6 lên 10, và mỗi người chơi có quyền cấm 1 Tướng
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/52e0ae6e94996d69ad80f629fdc9a8a7/0/?width=945&height=435" alt="banpick-UI-peak-1">
+                    Cả 10 người chơi đồng thời cấm Tướng, có thể xem Tướng đồng đội cấm, nhưng không thể xem của kẻ địch
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/d0c8cecba8fa7b9cf79d7c55c390cf59/0/?width=945&height=437" alt="banpick-UI-peak-2">
+                    Khi kết thúc giai đoạn cấm, bảng Tướng cấm của hai bên mới được lộ diện, do đó có thể dẫn đến hiện tượng cấm trùng Tướng (lượt cấm vẫn có tác dụng)
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/825a9dd2cc215439442064911af65b42/0/?width=945&height=436" alt="banpick-UI-peak-3">
+                    Hệ thống cấm chọn này sẽ được thử nghiệm ở đấu Thượng Đỉnh trước, sau đó mới được chỉnh sửa và áp dụng ở đấu Xếp Hạng từ rank Kim Cương trở lên. Các giai đoạn còn lại trong quá trình cấm chọn được giữ nguyên
+                  </p>
+              </p>
+            <h3>Các thay đổi khác trong quá trình cấm chọn:</h3>
+              <p class="contentbox">
+                <h4 class="title">Đề cử trang bị theo lane:</h4>
+                  <p class="minicontentbox">
+                    Đối với các Tướng có thể đi nhiều lane, sau khi pick Tướng theo đúng vai trò mình đã chọn, các bộ trang bị được đề cử nhanh sẽ được sắp xếp lại, ưu tiên các bộ trang bị phù hợp với vai trò hiện tại hơn
+                    <br><br>
+                    (Ví dụ, chọn vai trò Hỗ Trợ và pick Hạ Hầu Đôn, thì các bộ trang bị đề cử sẽ dành cho Hạ Hầu Đôn ở vị trí Hỗ Trợ)
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/15e14b4dd04aa820f166f06f1739d90e/0/?width=945&height=418" alt="quickset-UI">
+                  </p>
+                <h4 class="title">Thay đổi với vị trí Toàn năng:</h4>
+                  <p class="minicontentbox">
+                    <span class="underline">Loại bỏ cơ chế:</span> Ưu tiên đẩy những người chọn vai trò Toàn năng xuống 2 vị trí cuối cùng trong giai đoạn cấm chọn
+                    <br><br>
+                    Thu gọn biểu tượng vinh danh người chơi vai trò Toàn năng, hiển thị cạnh nickname thay vì che tên như trước:
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/966aecce7f1f8064b12d72a5e2c0bae7/0/?width=654&height=144" alt="allrounder-role">
+                  </p>
+                <h4 class="title">Cập nhật thứ tự Tướng trong bảng cấm chọn:</h4>
+                  <p class="minicontentbox">
+                    Dựa trên tỷ lệ cấm chọn của toàn bộ người chơi, thứ tự hiển thị Tướng trong bảng cấm chọn sẽ được sắp xếp nhằm tăng độ thuận tiện để lựa chọn (ví dụ, Đông Hoàng Thái Nhất và Trương Lương sẽ hay xuất hiện ở phần trên của bảng Tướng cấm)
+                  </p>
+                <h4 class="title">Thay đổi quy tắc huỷ trận:</h4>
+                  <p class="minicontentbox">
+                    Giờ đây, một khi đã pick đội hình đủ 5 vai trò, chức năng huỷ trận để ghép lại sẽ bị vô hiệu hoá
+                  </p>
+                <h4 class="title">Nhắc nhở khi cấm Tướng của đồng đội:</h4>
+                  <p class="minicontentbox">
+                    Khi bạn chuẩn bị cấm Tướng mà đồng đội đã nhá hàng trước, một cảnh báo sẽ hiện ra để yêu cầu bạn xác minh lại, đồng thời nút Cấm sẽ bị vô hiệu hoá trong thời gian ngắn để tránh ấn nhầm
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/df80e095a4823b91cea8bbec641fec52/0/?width=945&height=435" alt="ban-ally-hero">
+                  </p>
+                <h4 class="title">Cảnh báo khi pick Tướng trái lane:</h4>
+                  <p class="minicontentbox">
+                    Đối với trường hợp pick Tướng trái lane, sẽ có cảnh báo nhắc nhở mạnh mẽ về hình phạt phải nhận:
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/33ce6c867f96cf1419f2860d4a14fd3e/0/?width=1066&height=492" alt="pick-warning">
+                  </p>
+                <h4 class="title">Đề cử Tướng cấm:</h4>
+                  <p class="minicontentbox">
+                    Sau khi nhá hàng Tướng định chọn, ở giao diện cấm Tướng sẽ đề cử các Tướng bạn nên cấm, dựa trên dữ liệu thu thập từ người chơi và thói quen cấm Tướng của bạn:
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/252a98cd9f6928a42308547e9d5cb8dc/0/?width=945&height=431" alt="smart-ban">
+                  </p>
+                <h4 class="title">Thông thạo lane được điều chỉnh vị trí:</h4>
+                  <p class="minicontentbox">
+                    Điểm thông thạo lane giờ sẽ hiển thị trong bảng thông số khi click vào avatar người chơi, thay vì hiện ở góc màn hình trong giai đoạn cấm chọn
+                    <img src="https://img.crawler.qq.com/cfwebcap/0/a8e87c7a494a83becc18a3a4ca658b0d/0/?width=945&height=435" class="center75" alt="lane-mastery">
+                  </p>
+              </p>
+            <h3>Chức năng giao lưu trong trận:</h3>
+              <p class="contentbox">
+                <h4 class="title">Thêm chức năng gợi ý ping dựa trên tình huống:</h4>
+                  <p class="minicontentbox">
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/3c5233b184783aa18a4d754ca1e0e92a/0/?width=945&height=438" alt="smart-ping">
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/7439a2d64298d1f1feef294855c42121/0/?width=1189&height=849" alt="smart-ping-demo">
+                  </p>
+                <h4 class="title">Thêm một số ping nhanh (chỉ cần ấn nút như Like trong trận) theo tình huống:</h4>
+                  <p class="minicontentbox">
+                    Bao gồm có "Để mình dọn lính giúp cho", "Ăn cục máu đi", "Xạ Thủ ra ăn Bùa Đỏ này", "Pháp Sư ra ăn Bùa Xanh này", "Mình sẽ đi lấy tầm nhìn", "Mọi người ăn rồng đi, tôi canh cho", "Tôi vừa bị lag chút thôi, không sao đâu"...
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/d57b1616d848d0b15696bd05724a92cb/0/?width=1282&height=732" alt="quickping">
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/b300ca7217c7805dcb9f2d1b05033359/0/?width=945&height=427" alt="quickping-demo">
+                  </p>
+                <h4 class="title">Điều chỉnh tính năng Like trong trận:</h4>
+                  <p class="minicontentbox">
+                    Nôm na là cái gì cũng thả Like được hết, kể cả quét sạch team địch
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/2b85fcac98dcb0c53d39a8a8cbcafb1e/0/?width=1257&height=603" alt="ingame-Like">
+                  </p>
+              </p>
+            <h3>Màn hình tổng kết trận đấu:</h3>
+              <p class="contentbox">
+                <h4 class="title">Giao diện thả like:</h4>
+                  <p class="minicontentbox">
+                    Giờ có thể xem skin của đồng đội
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/ce00f71d84101a22f709dcb9a6e85ce7/0/?width=3826&height=1774" alt="end-screen-1">
+                  </p>
+                <h4 class="title">Dữ liệu cá nhân:</h4>
+                  <p class="minicontentbox">
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/75658a5ca2ea147db78ba1413cac37b4/0/?width=945&height=436" alt="end-screen-2">
+                  </p>
+                <h4 class="title">Giao diện rank:</h4>
+                  <p class="minicontentbox">
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/ca79883c66e588f85c0c9fcd1e3e9d60/0/?width=945&height=435" alt="end-screen-3">
+                  </p>
+                <h4 class="title">Bảng tổng sắp 10 người (20 người như 10v10 ra chuồng gà nằm):</h4>
+                  <p class="minicontentbox">
+                    Giờ sẽ hiển thị skin của người chơi:
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/f89395f7df25be32867c393af0e2a15e/0/?width=1066&height=492" alt="end-screen-4">
+                  </p>
+              </p>
+            <h3>Thay đổi khác trong vấn đề tổng kết thành tích:</h3>
+              <p class="contentbox">
+                <h4 class="title">Thay đổi công thức tính điểm MVP:</h4>
+                  <p class="minicontentbox">
+                    Trước đây, công thức tính điểm thiên về mạng hạ gục và hỗ trợ, khiến cho các vị Tướng có K/D/A không đẹp thường bị đánh tụt điểm xuống mức thấp hơn so với đóng góp thực sự cho toàn đội. Công thức mới sẽ tính thêm các yếu tố khác như Đẩy trụ, Kiểm soát mục tiêu lớn... với tỷ lệ được phân bổ đều hơn. Thêm vào đó, các vị Tướng đi nhiều lane cũng sẽ được áp dụng công thức tính điểm một cách phù hợp với lane mình đã chơi
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/c9ab3afe4b05c08baaec5371def44af6/0/?width=1024&height=512" alt="MVP-calc">
+                  </p>
+                <h4 class="title">Hệ thống tính điểm xếp hạng mới:</h4>
+                  <p class="minicontentbox">Xoá bỏ hệ thống điểm tinh tuý cũ, thay bằng hệ thống mới như sau:</p>
+                  <ul class="post">
+                    <li>Cứ tích đủ 100 điểm tinh tuý sẽ nhận được 1 sao</li>
+                    <li>Tổng kết trận được Huy chương Vàng, nhận thêm 100 điểm tinh tuý</li>
+                    <li>Tổng kết trận được Huy chương Bạc, nhận thêm 40 điểm tinh tuý</li>
+                  </ul>
+                  <p class="minicontentbox">
+                    Dưới đây là cách tính điểm tinh tuý cũ:
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/72c33bae05f0bdfda45584a801ab961b/0/?width=1024&height=512" alt="star-point-system-old">
+                    Và đây là cách tính điểm tinh tuý mới:
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/b2255efc55c2dddd7caa197c72eda3b2/0/?width=1024&height=513" alt="star-point-system-new">
+                  </p>
+                <h4 class="title">Thay đổi với hệ thống tính sao theo lane (chỉ áp dụng từ rank Vương Giả trở lên) và hệ thống nhiệm vụ mùa giải:</h4>
+                  <p class="minicontentbox">
+                    Xoá bỏ hệ thống tính sao theo lane
+                    <br><br>
+                    Giảm độ khó của nhiệm vụ mùa giải, xoá bỏ các nhiệm vụ liên quan đến hệ thống tính sao theo lane nói trên; tăng lượng XP được thưởng từ nhiệm vụ, giảm lượng XP yêu cầu để hoàn thành nhiệm vụ; tổng kết lại, người chơi sẽ hoàn thành nhiệm vụ mùa giải nhanh hơn
+                    <br><br>
+                    Thay đổi phần thưởng trong hệ thống nhiệm vụ mùa giải: Xoá bỏ hòm tặng thẻ bảo hộ sao theo lane, thay thế bằng Hộp Kỳ Bí Siêu Cấp; thẻ bảo hộ sao theo lane được thay bằng thẻ bảo hộ sao toàn năng (lane nào cũng dùng được)
+                  </p>
+                <h4 class="title">Thay đổi cơ chế dọn dẹp chiến trường:</h4>
+                  <p class="minicontentbox">
+                    Giờ sẽ tiến hành dọn dẹp ngay khi có màn hình thông báo thắng/thua trận, thay vì thực hiện trong giai đoạn tổng kết, làm tăng độ mượt mà cho trò chơi
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/1ca4ca780fad5fcf6dfa371d77fba414/0/?width=945&height=435" alt="clean">
+                  </p>
+              </p>
+          <h2>Tối ưu hoá cơ chế chiến đấu:</h2>
+            <h3>Tối ưu hoá cơ chế ngắm bắn chuẩn xác:</h3>
+              <p class="contentbox">
+                <h4 class="title">Thay đổi thiết lập:</h4>
+                  <p class="minicontentbox">
+                    Có nhiều tuỳ chọn cho bạn lựa, tuỳ theo thói quen và sở thích nhé:
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/5b0d0f793451d16ddd007cf529af6121/0/?width=945&height=533" alt="aim-setting">
+                  </p>
+                <h4 class="title">Chạm để huỷ:</h4>
+                  <p class="minicontentbox">
+                    Kéo thả nút đánh thường để chuyển ghim tâm sang mục tiêu khác sẽ khiến Tướng tự động tấn công thêm một lần nữa vào mục tiêu hiện tại, chỉ các đòn đánh tiếp theo mới nhắm vào mục tiêu mới; phù hợp với người chơi bấm phím với tần suất thấp và không đòi hỏi độ chính xác cao
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/7fef33475447e6c241cc6aff83ea6944/0/?width=800&height=451" alt="aim-1">
+                  </p>
+                <h4 class="title">Nhả tay để huỷ:</h4>
+                  <p class="minicontentbox">
+                    Nhấc ngón tay khỏi nút đánh thường sẽ ngay lập tức huỷ ghim tâm trên mục tiêu hiện tại; phù hợp với người chơi bấm phím với tần suất cao, yêu cầu độ chính xác cao
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/ca9ab46825f99f909affdc3464f4b685/0/?width=800&height=451" alt="aim-2">
+                  </p>
+                <h4 class="title">Thích ứng:</h4>
+                  <p class="minicontentbox">
+                    Dự đoán thao tác của người chơi để giảm delay khi nhấn đánh thường; phù hợp với người chơi bấm phím với tần suất thấp mà yêu cầu độ chính xác cao
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/087026826059c8582c9f91fb575222ac/0/?width=800&height=451" alt="aim-3">
+                  </p>
+              </p>
+            <h3>Tối ưu hoá hình ảnh con trỏ định vị:</h3>
+              <p class="contentbox">
+                Làm mờ vòng hiển thị phạm vi, tô đậm tâm ghim
+                <br><br>
+                <em>Trước khi sửa:</em>
+                <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/692ff79139cca75cafce743269cc2f28/0/?width=800&height=451" alt="target-old">
+                <em>Sau khi sửa:</em>
+                <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/5d6f2a7814edaf4910bbedc0247dd57a/0/?width=800&height=451" alt="target-new">
+                <h4 class="title">Điều chỉnh tầm xa con trỏ định vị:</h4>
+                  <p class="minicontentbox">
+                  Giờ sẽ thống nhất tầm xa giữa các Tướng, bất kể tầm đánh/thi triển chiêu thức
+                  <img class="center75" src="/img/misc/retouch_2024082916565021.jpg" alt="target-dis">
+                  </p>
+                <h4 class="title">Ưu tiên Tướng khi vuốt nhanh con trỏ ngắm bắn:</h4>
+                  <p class="minicontentbox">
+                    Khi bạn vuốt nhanh nút đánh thường, con trỏ sẽ ưu tiên ghim vào Tướng địch, tránh trường hợp bắn hụt
+                    <br><br>
+                    <em>Trước khi sửa:</em>
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/d865faf03d75d0073d29a72a69973e7d/0/?width=800&height=450" alt="quick-target-old">
+                    <em>Sau khi sửa:</em>
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/a2e43568bc4142edb69c70410be1522e/0/?width=800&height=450" alt="quick-target-new">
+                  </p>
+                <h4 class="title">Chức năng Truy đuổi khi Di chuyển được nâng cấp:</h4>
+                  <p class="contentbox">
+                    Kỹ năng nhắm vào đơn vị chỉ định giờ sẽ hỗ trợ Tướng truy đuổi theo mục tiêu trong một khoảng thời gian ngắn sau khi nhấn nút thi triển, được bật tắt cùng với thiết lập "Truy đuổi khi Di chuyển" vốn đã có cho cơ chế đánh thường
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/ae078d55a3cc3cd3b4f350dea4da8017/0/?width=945&height=526" alt="chasing-aim">
+                    <em>Trước đây:</em>
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/38f1744683688aacefcc9800b6af44e6/0/?width=800&height=450" alt="chasing-aim-old">
+                    <em>Sắp tới:</em>
+                    <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/f9072993f883aa8258176fca5c19d996/0/?width=800&height=450" alt="chasing-aim-new">
+                  </p>
+              </p>
+            <h3>Tối ưu hoá logic chọn mục tiêu tấn công:</h3>
+              <p class="contentbox">
+                <div style="width: 64%; position: relative; padding-bottom: 36%; height: 0; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
+                  <video controls style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    <source src="/img/misc/Snapsave.app_-U6qU.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <br><br>
+                <em class="contentbox">Lựa chọn “Ưu tiên nhắm mục tiêu thấp máu nhất/gần nhất” bây giờ cũng sẽ áp dụng cho cả chiêu thức</em>
+                <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/349627e2591fe98fa6ddd58bb9fa82ad/0/?width=945&height=526" alt="aim-HP">
+              </p>
+            <h3>Tối ưu hoá hiệu ứng đánh dấu mục tiêu:</h3>
+              <p class="contentbox">
+                Khi đối tượng chịu nhiều loại đánh dấu cùng một lúc, các dấu ấn sẽ hiển thị riêng rẽ thay vì chồng chéo lên nhau như trước
+                <br><br>
+                <em>Trước khi sửa:</em>
+                <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/a09737e15d1b0690df398838b0aa400d/0/?width=800&height=450" alt="mark-1">
+                <em>Sau khi sửa:</em>
+                <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/246f23304a5ca9f606bc1945dd54dc88/0/?width=800&height=450" alt="mark-2">
+              </p>
+            <h3>Hiệu ứng kích động lính:</h3>
+              <p class="contentbox">
+                Khi Tướng bị đối phương tấn công trong lúc đang có Lính cùng phe ở xung quanh, Lính sẽ ngay lập tức chuyển mục tiêu tấn công sang kẻ tấn công đó
+                <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/f9041dfad7e9851af5ef4427f982dcd2/0/?width=800&height=451" alt="creepaggro">
+              </p>
+            <h3>Một số chiêu thức bây giờ có thể kết hợp sử dụng với trang bị kích hoạt trong khi thi triển:</h3>
+              <p class="contentbox">
+                Trước đây khi đang trong thời gian vận sức/thi triển những chiêu thức này, trang bị kích hoạt sẽ tạm thời bị cấm dùng, tuy nhiên giờ thì không nhé
+                <img src="https://img.crawler.qq.com/cfwebcap/0/ffd3dd78ce387055e766bdf769ed21ac/0/?width=1226&height=844" class="center75" alt="dualcast">
+                <br>
+                Các chiêu thức được chỉnh sửa bao gồm:
+                <br><br>
+                <table class="norm">
+                  <thead id="aqua">
+                    <tr>
+                      <th>Tướng</th>
+                      <th>Chiêu thức</th>
+                    </tr>
+                  </thead>
+                  <tbody id="gray">
+                    <tr>
+                      <td class="champbox50">
+                        <img src="/img/hero/liushan.webp" alt="Lưu Thiện">
+                        <span id="text">Lưu Thiện</span>                
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/liushan_1.webp" alt="Chiêu 1">
+                        <span id="text">Chiêu 1<br>(khi chưa tung đòn đánh cường hoá)</span>                                      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/lubu.webp" alt="Lữ Bố">
+                        <span id="text">Lữ Bố</span>                      
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/lubu_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu cuối</span>                      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/yuange.webp" alt="Nguyên Ca">
+                        <span id="text">Nguyên Ca</span>                      
+                      </td>
+                      <td class="champbox50">                    
+                        <img src="/img/hero_skill/yuange_1_1.webp" alt="Chiêu 1.1">
+                        <img src="/img/hero_skill/yuange_1_2.png" alt="Chiêu 1.2">
+                        <span id="text">Chiêu 1</span>                      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/angela.webp" alt="Angela">
+                        <span id="text">Angela</span>                     
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/angela_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu cuối</span>                      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/jiangziya.webp" alt="Khương Tử Nha">
+                        <span id="text">Khương Tử Nha</span>                      
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/jiangziya_0.webp" alt="Phong thần">
+                        <span id="text">Nội tại<br>(trong khi đang Phong thần)</span>                      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/doria.webp" alt="Doria">
+                        <span id="text">Doria</span>                      
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/doria_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu cuối</span>                    
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/zhangfei.webp" alt="Trương Phi">
+                        <span id="text">Trương Phi</span>                      
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/zhangfei_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu cuối</span>                      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/genghiskhan.webp" alt="Thành Cát Tư Hãn">
+                        <span id="text">Thành Cát Tư Hãn</span>                      
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/genghiskhan_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu cuối</span>                      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/nezha.webp" alt="Natra">
+                        <span id="text">Natra</span>                     
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/nezha_2.webp" alt="Chiêu 2">
+                        <img src="/img/hero_skill/nezha_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu 2 & Chiêu cuối</span>                     
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/donghuangtaiyi.webp" alt="Đông Hoàng Thái Nhất">
+                        <span id="text">Đông Hoàng Thái Nhất</span>                      
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/donghuangtaiyi_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu cuối</span>                     
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/daqiao.webp" alt="Đại Kiều">
+                        <span id="text">Đại Kiều</span>                      
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/daqiao_2.webp" alt="Chiêu 2">
+                        <img src="/img/hero_skill/daqiao_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu 2 & Chiêu cuối<br>(trong khi đang vận sức để dịch chuyển)</span>                      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/huangzhong.webp" alt="Hoàng Trung">
+                        <span id="text">Hoàng Trung</span>                      
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/huangzhong_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu cuối</span>                
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/shenmengxi.webp" alt="Thẩm Mộng Khê">
+                        <span id="text">Thẩm Mộng Khê</span>                      
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/shenmengxi_2.webp" alt="Chiêu 2">
+                        <span id="text">Chiêu 2<br>(khi chưa tái kích hoạt)</span>                      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/mingshiyin.webp" alt="Minh Thế Ẩn">
+                        <span id="text">Minh Thế Ẩn</span>                     
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/mingshiyin_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu cuối</span>                      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/peiqinhu.webp" alt="Bùi Cầm Hổ">
+                        <span id="text">Bùi Cầm Hổ</span>                 
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/peiqinhu_2_2.webp" alt="Chiêu 2 dạng Hổ">
+                        <span id="text">Chiêu 2 dạng Hổ</span>                      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/yao.webp" alt="Yao">
+                        <span id="text">Yao</span>                      
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/yao_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu cuối<br>(trong khi đang bay tới chỗ mục tiêu)</span>                      
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/lixin.webp" alt="Lý Tín">
+                        <span id="text">Lý Tín</span>                      
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/lixin_ulti_1.webp" alt="Hoá Quỷ">
+                        <img src="/img/hero_skill/lixin_ulti_2.webp" alt="Hoá Thần">
+                        <span id="text">2 Chiêu cuối (trong khi biến hình)</span>                  
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/haiyue.webp" alt="Hải Nguyệt">
+                        <span id="text">Hải Nguyệt</span>                     
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/haiyue_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu cuối</span>                  
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">                      
+                        <img src="/img/hero/mengtian.webp" alt="Mông Điềm">
+                        <span id="text">Mông Điềm</span>                      
+                      </td>
+                      <td class="champbox50">              
+                        <img src="/img/hero_skill/mengtian_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu cuối</span>                
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">               
+                        <img src="/img/hero/sangqi.webp" alt="Tang Khởi">
+                        <span id="text">Tang Khải</span>                      
+                      </td>
+                      <td class="champbox50">                      
+                        <img src="/img/hero_skill/sangqi_2.webp" alt="Chiêu 2">
+                        <img src="/img/hero_skill/sangqi_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu 2 & Chiêu cuối (khi đang bay)</span>                  
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </p>
+            <h3>Thêm chỉ báo tầm xa của đòn đánh có hiệu ứng di chuyển:</h3>
+              <p class="contentbox">
+                Với các đòn đánh kèm theo hiệu ứng đột kích/lao tới mục tiêu, sẽ có thêm vòng tròn chỉ báo tầm xa của đòn đánh (hiện đã có sẵn trên đòn đánh thứ nhất trong combo 3 đòn của Á Liên, có thể tham khảo)
+                <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/47ad5eb4975e14949c59a965e21f3cb2/0/?width=487&height=332" alt="atk-range">
+                <br>
+                Các tướng được chỉnh sửa thêm cơ chế này:
+                <ul class="post">
+                  <li class="champbox75">                  
+                    <img src="/img/hero/miyamotomusashi.webp" alt="Miyamoto Musashi">
+                    <span id="text">Miyamoto Musashi</span>                 
+                  </li>
+                  <li class="champbox75">
+                    <img src="/img/hero/simayi.webp" alt="Tư Mã Ý">
+                    <span id="text">Tư Mã Ý</span>
+                  </li>
+                  <li class="champbox75">
+                    <img src="/img/hero/shiranuimai.webp" alt="Shiranui Mai">
+                    <span id="text">Shiranui Mai</span>
+                  </li>
+                  <li class="champbox75">
+                    <img src="/img/hero/dongfangyao.webp" alt="Diệu">
+                    <span id="text">Diệu</span>
+                  </li>
+                </ul>
+              </p>
+            <h3>Hiệu ứng phân biệt ảnh ảo với bản thể thật trên bản đồ nhỏ:</h3>
+              <p class="contentbox">
+                Ảnh ảo do Kính tạo ra sau khi dùng chiêu sẽ có biểu tượng sẫm màu hơn
+                <br>
+                <img class="center" src="https://img.crawler.qq.com/cfwebcap/0/e758f3628a4824fe67ee21fa81e9dcbf/0/?width=309&height=312" alt="mirror-1">
+                Biểu tượng của Đại Kiều tại vị trí đích đến của thao tác dịch chuyển cũng được coi là ảo ảnh, đánh dấu sẫm màu hơn
+                <br>
+                <img class="center" src="https://img.crawler.qq.com/cfwebcap/0/d1aab13f9538d07757b0eb1012519cf6/0/?width=309&height=312" alt="mirror-2">
+                Bản thân Hải Nguyệt và Tướng bị đưa vào kết giới cùng cô cũng được coi là ảo ảnh trong thời gian hiệu lực, đánh dấu sẫm màu hơn
+                <br>
+                <img class="center" src="https://img.crawler.qq.com/cfwebcap/0/96561123d04ec07a29c0c2b46255a27b/0/?width=308&height=312" alt="mirror-3">
+              </p>
+            <h3>Hiệu ứng tổng sát thương tích luỹ:</h3>
+              <p class="contentbox">
+                Với một số chiêu thức có khả năng gây sát thương theo thời gian, thêm chỉ báo tổng sát thương do chiêu thức này gây ra
+                <br>
+                <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/9327feac13de3197777a2493e0a4dbe9/0/?width=345&height=273" alt="stackdmg">
+                Các chiêu thức được chỉnh sửa:
+                <br><br>
+                <table class="norm">
+                  <thead id="aqua">
+                    <tr>
+                      <th>Tướng</th>
+                      <th>Chiêu thức</th>
+                    </tr>
+                  </thead>
+                  <tbody id="gray">
+                    <tr>
+                      <td class="champbox50">
+                        <img src="/img/hero/zhongwuyan.webp" alt="Chung Vô Diệm">
+                        <span id="text">Chung Vô Diệm</span>
+                      </td>
+                      <td class="champbox50">
+                        <img src="/img/hero_skill/zhongwuyan_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu cuối</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">
+                        <img src="/img/hero/miyue.webp" alt="Mị Nguyệt">
+                        <span id="text">Mị Nguyệt</span>
+                      </td>
+                      <td class="champbox50">
+                        <img src="/img/hero_skill/miyue_2.webp" alt="Chiêu 2">
+                        <span id="text">Chiêu 2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">
+                        <img src="/img/hero/dharma.webp" alt="Đạt Ma">
+                        <span id="text">Đạt Ma</span>
+                      </td>
+                      <td class="champbox50">
+                        <img src="/img/hero_skill/dharma_2.webp" alt="Chiêu 2">
+                        <span id="text">Chiêu 2</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">
+                        <img src="/img/hero/jiangziya.webp" alt="Khương Tử Nha">
+                        <span id="text">Khương Tử Nha</span>
+                      </td>
+                      <td class="champbox50">
+                        <img src="/img/hero_skill/jiangziya_1.webp" alt="Chiêu 1">
+                        <span id="text">Chiêu 1</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="champbox50">
+                        <img src="/img/hero/liyuanfang.webp" alt="Lý Nguyên Phương">
+                        <span id="text">Lý Nguyên Phương</span>
+                      </td>
+                      <td class="champbox50">
+                        <img src="/img/hero_skill/liyuanfang_ulti.webp" alt="Chiêu cuối">
+                        <span id="text">Chiêu cuối</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </p>
+            <h3>Thay đổi thanh máu của con rối thành thanh máu Tướng, cho phép hiển thị các trạng thái như hồi Máu/bị đốt Máu/lá chắn…:</h3>
+              <p class="contentbox">
+                <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/26305f089a27a588a86b35e36eb2ee68/0/?width=945&height=534" alt="puppet">
+              </p>
+            <h3>Thêm tính năng chia sẻ cài đặt giao diện nút bấm:</h3>
+              <p class="contentbox">
+                Bạn có thể lựa chọn chia sẻ giao diện nút bấm với bạn bè (tương tự chia sẻ khoảnh khắc, thành tích…) nhằm giúp thiết lập nhanh chóng
+                <img src="https://img.crawler.qq.com/cfwebcap/0/1339d0b6867c502321a8a2afec083667/0/?width=945&height=532" class="center75" alt="items"> 
+              </p>
+          <h2>Thêm chức năng soi cam của đồng đội khi đang chờ hồi sinh:</h2>
+            <p class="contentbox">
+              Chức năng đã có từ lâu bên bản global, nay mới bê về nội địa ha
+              <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/60255db6abe24191b71beee21918c1af/0/?width=600&height=338" alt="Minh hoạ chức năng soi cam khi đang đếm số trên bảng">
+            </p>
+          <h2>Thêm thông báo thành tích độc quyền từng Tướng:</h2>
+            <p class="contentbox">
+              Các thành tích này sẽ hiển thị tương tự như thông báo ăn mạng/hạ gục (xin phép skip vì không liên quan nhiều đến cơ chế game)
+              <br><br>
+              Dưới đây là những vị Tướng có thêm thông báo độc quyền: Triệu Vân, Phi, Đại Tư Mệnh, Mã Siêu, Ngu Cơ, Thượng Quan Uyển Nhi, Chân Lạc
+            </p>
+          <h2>Tối ưu giao diện lựa chọn bộ trang bị nhanh trong trận:</h2>
+            <p class="contentbox">
+              <span style="font-size: 14px; text-decoration-line: line-through;">Con 10xu bị ngu hả mà tách cái này ra riêng vậy?</span>
+              <br><br>
+              Giờ sẽ có thêm tag bên cạnh tên trang bị, giúp bạn biết món nào vừa được buff/bị nerf/có sự điều chỉnh cân bằng
+              <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/4a7b880e6c643767ab95eeec93748406/0/?width=945&height=438" alt="items-set">
+            </p>
+          <h2>Điều chỉnh Chúng Tinh Hạp Cốc (map 10v10):</h2>
+            <h3>Nguyên Sơ Thí Luyện (cơ chế hỗ trợ lật kèo cho team đang yếu thế) được cải tiến, mở đến bậc thứ 5, song tổng lợi ích kinh tế sẽ không thay đổi</h3>
+            <h3>Thêm chế độ biểu tượng bùa lợi ghép:</h3>
+              <p class="contentbox">
+                Nhằm hạn chế việc giao diện có quá nhiều biểu tượng dẫn đến che khuất tầm nhìn, các biểu tượng bùa lợi của Bùa Xanh, Bùa Đỏ và Bùa Vàng giờ đây sẽ gộp vào nhau
+                <img class="center" src="https://img.crawler.qq.com/cfwebcap/0/5f375ab4c673338e4e300d2ba6edbf88/0/?width=124&height=106" alt="buffs">
+              </p>
+            <h3>Nâng cấp ngoại hình Bùa Vàng:</h3>
+              <img class="contentbox center75" src="https://img.crawler.qq.com/cfwebcap/0/3b4c142e5a9df893e9b0ca6f6fd7ef6f/0/?width=945&height=525" alt="goldenbuff">
+            <h3>Cơ chế cổng dịch chuyển mới:</h3>
+              <p class="contentbox">
+                Tương tự map 5v5, có thể ấn vào <a id="normal-link" href="#teleport">đây</a> để xem lại
+              </p>
+            <h3>Minimap giờ có thể hiển thị đủ 10 người team mình:</h3>
+              <img class="contentbox center75" src="https://img.crawler.qq.com/cfwebcap/0/0347db99b80dc80288bce29b6471d629/0/?width=484&height=419" alt="10v10-1">
+            <h3>Chế độ xem trận đấu 10v10 được ra mắt, hoạt động tương tự 5v5:</h3>
+              <img class="contentbox center75" src="https://img.crawler.qq.com/cfwebcap/0/ad9fc40ee58262f8e7d5f83392e567d3/0/?width=945&height=436" alt="10v10-2">
+            <h3>Mở chức năng tạo phòng đấu 10v10:</h3>
+              <img class="contentbox center75" src="https://img.crawler.qq.com/cfwebcap/0/48adeb598ae5f25bc32f116221a429d0/0/?width=945&height=433" alt="10v10-3">
+            <h3>Thêm nút “rủ lập team cùng” ở màn hình tổng kết thành tích, nhanh chóng rủ các đồng đội cùng nhau chơi ván tiếp theo:</h3>
+              <img class="contentbox center75" src="https://img.crawler.qq.com/cfwebcap/0/1981aacc0d8c973b59eabf979bc0c72d/0/?width=945&height=477" alt="10v10-4">
+            <h3>Thêm bảng thống kê thông số 10v10:</h3>
+              <img class="contentbox center75" src="https://img.crawler.qq.com/cfwebcap/0/71eb28d243ade751aa593a703f324849/0/?width=945&height=436" alt="10v10-5">
+            <h3>Quy tắc xếp rank điều chỉnh cho tương tự với 5v5, đồng thời giảm số điểm tinh tuý yêu cầu tích luỹ để quy đổi ra 1 sao:</h3>
+              <ul class="post">
+                <li><span class="underline">Cũ:</span> Mọi bậc rank đều theo tỷ lệ 100 điểm tinh tuý = 1 sao</li>
+                <li><span class="underline">Mới:</span> Xem trong bảng sau:</li>
+                  <table class="norm">
+                    <thead id="aqua">
+                      <tr>
+                        <th>Rank</th>
+                        <th>Mức điểm yêu cầu để quy đổi ra 1 sao</th>
+                      </tr>
+                    </thead>
+                    <tbody id="gray">
+                      <tr>
+                        <td>Đồng & Bạc</td>
+                        <td>60</td>
+                      </tr>
+                      <tr>
+                        <td>Vàng & Bạch Kim</td>
+                        <td>70</td>
+                      </tr>
+                      <tr>
+                        <td>Kim Cương</td>
+                        <td>80</td>
+                      </tr>
+                      <tr>
+                        <td>Tinh Diệu</td>
+                        <td>90</td>
+                      </tr>
+                      <tr>
+                        <td>Vương Giả trở lên</td>
+                        <td>100</td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </ul>
+          <h2>Chức năng bình luận trực tiếp trong trận được lên sóng!</h2>
+            <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/cd02042ea24b6af2db9223e879679fea/0/?width=945&height=472" alt="stream">
+            <h3>Bình luận trực tiếp trong trận đấu hoạt động như thế nào:</h3>
+              <p class="contentbox">
+                Trong trận đấu 5v5 Thường/Xếp Hạng/Thượng Đỉnh, streamer có thể bật chức năng "bình luận trực tiếp", nếu như họ đang stream trên một nền tảng bất kỳ được game hỗ trợ. Tên của các fan trên stream sẽ được hiển thị ở khán đài bên cạnh Bệ Đá Cổ, và các fan có thể trực tiếp cổ vũ cho streamer yêu thích của mình!
+                <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/0d7e9ccda2ad3856cd8a5f00c4e42be2/0/?width=1104&height=532" alt="stream-1">
+                Streamer cũng có thể lựa chọn đặt tên các fan cho những con lính phe mình, và fan có thể tận hưởng cảm giác làm đồng đội với idol
+                <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/33d8676bf28309e938d4da6db96f1e4a/0/?width=1048&height=483" alt="stream-2">
+                Để mở khoá chức năng này, bạn cần liên kết tài khoản game với nền tảng stream thông qua Tencent Games, hoặc thiết lập của nền tảng đó
+                <br><br>
+                Hiện tại, game đã có sẵn liên kết với Douyin, Kuaishou và Huya, các nền tảng khác vui lòng tự vào mục Cài đặt để thiết lập thủ công
+                <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/14311ca7bf2b425ce618a2c2fd0594a6/0/?width=945&height=432" alt="stream-3">
+              </p>
+            <h3>Tính năng bổ sung cho trận đấu tuỳ chọn:</h3>
+              <p class="contentbox">
+                Chức năng này cũng có thể bật trong trận đấu tuỳ chọn (nếu bạn stream qua 3 nền tảng được liên kết là Douyin, Kuaishou và Huya), cho phép các fan tương tác với streamer nhiều hơn nữa thông qua việc tặng quà hay vật phẩm; ví dụ như, bất ngờ triệu hồi 5 Mặc Tử chưởng chiêu 2 vào mặt idol... Có đến hơn 80 loại quà tặng/vật phẩm tạo hiệu ứng trong trận, hãy tự mình khám phá nhé!
+                <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/06b30c9e4f3ca94458e1a17cf8be53e2/0/?width=1038&height=786" alt="stream-4">
+              </p>
+          <h2>Tính năng nền load trận kép:</h2>
+            <p class="contentbox">
+              Trước đây, bạn chỉ có thể sử dụng 1 nền duy nhất cho từng skin; tuy nhiên từ bản cập nhật này, bạn có thể chọn tới 2 nền load trận:
+              <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/7906f2eea7e0e00299ffa7a038d524ce/0/?width=945&height=535" alt="bg-1">
+              <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/b11238fdaa4471e424baf809af279846/0/?width=945&height=532" alt="bg-2">
+            </p>
+          <h2>Tính năng khoe skin lính:</h2>
+            <p class="contentbox">
+              Nếu bạn sử dụng skin lính, nhấn nút tương tác trong màn hình load trận sẽ làm xuất hiện hoạt ảnh đặc biệt của lính đó
+              <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/f113cd5d817e6f3261b13bbed09eabc7/0/?width=2304&height=356" alt="creepskin">
+            </p>
+          <h2>Tối ưu hoá cơ chế mua Đa Sắc cho skin:</h2>
+            <p class="contentbox">
+              Game sẽ gỡ bỏ giới hạn khi mua Đa Sắc, từ giờ bạn không bắt buộc phải mua Tướng và skin nguyên bản để có thể mua Đa Sắc nữa
+              <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/0ce1b52109d024d1285ce7d4e9846910/0/?width=945&height=531" alt="chroma">
+            </p>
+          <h2>Tối ưu hoá Sảnh Ký Ức:</h2>
+            <p class="contentbox">
+              Điều chỉnh giao diện tương tác của Sảnh, tối ưu hoá trải nghiệm sử dụng, trang chủ của Sảnh giờ đây sẽ là mục nhận quà thưởng:
+              <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/9fb78f9c8115afe967db89724ea416bd/0/?width=945&height=435" alt="memory-1">
+              Nhấn nút "Nhận Mảnh Ký Ức" để truy cập giao diện Nhiệm Vụ và Thức Tỉnh Ký Ức (trang chủ cũ của Sảnh Ký Ức)
+              <br><br>
+              Những Mảnh Ký Ức thuộc diện bắt buộc phải có sẽ được tăng tỷ lệ rớt từ Hộp Kỳ Bí, giúp bạn nhanh chóng đạt tiến trình làm mới vòng quay thưởng; Hộp Kỳ Bí Siêu Cấp và Hộp Kỳ Bí Sử Thi có xác suất bộc phát, tăng số lượng Mảnh Ký Ức được nhận lên rất nhiều; ngoài ra, các Mảnh Ký Ức hiếm cũng được tăng tỷ lệ rớt
+              <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/3dbe09c2de94f3a81beefb46be677367/0/?width=945&height=435" alt="memory-2">
+              Nhiệm Vụ tham chiến hàng ngày đã được đổi thành hàng tuần, giúp bạn dễ dàng sắp xếp thời gian tham gia và hoàn thành hơn; mỗi tuần, bạn còn được nhận thêm 2 Hộp Kỳ Bí Siêu Cấp
+              <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/8620ad3e0c07e4f22c04a4270bbc2fee/0/?width=945&height=435" alt="memory-3">
+            </p>
+          <h2>Tối ưu hoá giao diện report bug game:</h2>
+            <p class="contentbox">
+              <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/836d30f5a0356be4e0df3f67b3df28ac/0/?width=945&height=450" alt="bug-report">
+              Bây giờ bạn có thể nhập thời điểm chính xác xảy ra bug game trong trận đấu, kèm theo report:
+              <img class="center" src="https://img.crawler.qq.com/cfwebcap/0/c9118527d3a5483122f918b25ad76f05/0/?width=693&height=424" alt="bug-report-1">
+              Bạn cũng có thể đính kèm ảnh từ album điện thoại làm bằng chứng:
+              <img class="center" src="https://img.crawler.qq.com/cfwebcap/0/b039f7539335805429f720ddfc74fd86/0/?width=155&height=228" alt="bug-report-2">
+              Thêm chức năng chuyển giọng nói thành văn bản cho phần mô tả bug:
+              <img class="center" src="https://img.crawler.qq.com/cfwebcap/0/ac44ece3669ca47a325e12bee6423396/0/?width=529&height=203" alt="bug-report-3">
+            </p>
+          <h2>Tối ưu hoá mục Highlight:</h2>
+            <p class="contentbox">
+              Các bản ghi tóm tắt diễn biến trận đấu cũng sẽ dược đưa vào đây, và lưu offline về máy của bạn
+              <br><br>
+              Có thêm chỉ báo giúp bạn phân biệt, đâu là highlight đã tải về máy, và đâu là highlight chưa được tải
+              <img class="center75" src="https://img.crawler.qq.com/cfwebcap/0/64b4e78e8f6136d11fa0f28aa1d633ba/0/?width=945&height=436" alt="highlight-1">
+              Thêm 3 nền tảng để bạn share highlight, bao gồm WeChat, Weibo và Xiaohongshu:
+              <img src="https://img.crawler.qq.com/cfwebcap/0/378babf2d89e7dbd1668ea9866a93acd/0/?width=945&height=431" class="center75" alt="highlight-2">
+              Nếu bạn thấy nút share còn màu xám, vui lòng đợi update bản mới của chức năng này nhé ^^
+            </p>
+          <h2>Sửa bug:</h2>
+            <p class="contentbox">
+              Rất nhiều bug, nhưng nếu nó ảnh hưởng lớn đến Tướng thì nó đã vào mục Chỉnh sửa Tướng rồi, nên không cần đọc đâu :>
+            </p>
+          <h2>Giờ thì bye bye cả nhà yêu của kem :P </h2>
         </article>
       </main>
     </div>
