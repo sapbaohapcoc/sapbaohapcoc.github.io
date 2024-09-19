@@ -31,7 +31,7 @@ body::before {
 
 .content {
   display: block;
-  width: 75%;
+  width: 100%;
   position: relative;
   z-index: 2; /* Ensure the content is above the overlay */
   color: whitesmoke; /* Adjust text color for better readability */
