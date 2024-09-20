@@ -6,6 +6,7 @@ article {
 article.main_part {
   display: flex;
   flex-direction: column;
+  font-size: 20px;
   color: whitesmoke;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -130,13 +131,13 @@ img.center {
 }
 
 .content .HP {
-  color: #1f995c;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: black;
+  text-shadow: -1px 0 #1f995c, 0 1px #1f995c, 1px 0 #1f995c, 0 -1px #1f995c;
 }
 
 .content .MP {
-  color: #0099cc;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: black;
+  text-shadow: -1px 0 #0099cc, 0 1px #0099cc, 1px 0 #0099cc, 0 -1px #0099cc;
 }
 
 .content .dmgPhys {
@@ -160,8 +161,8 @@ img.center {
 }
 
 .content .dmgMagic {
-  color: #00b0f0;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: black;
+  text-shadow: -1px 0 #00b0f0, 0 1px #00b0f0, 1px 0 #00b0f0, 0 -1px #00b0f0;
 }
 
 .content .MPen {
@@ -175,18 +176,18 @@ img.center {
 }
 
 .content .AP {
-  color: #7a6dff;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: black;
+  text-shadow: -1px 0 #7a6dff, 0 1px #7a6dff, 1px 0 #7a6dff, 0 -1px #7a6dff;
 }
 
 .content .dmgTrue {
-  color: whitesmoke;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: black;
+  text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
 }
 
 .content .shield {
-  color: grey;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: black;
+  text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
 }
 
 .underline {

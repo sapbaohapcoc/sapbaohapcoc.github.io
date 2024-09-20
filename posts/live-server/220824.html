@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/navbar.css" />
     <link rel="stylesheet" href="/css/post.css" />
+    <link rel="stylesheet" href="/css/index-list.css" />
   </head>
 
   <body>
@@ -75,16 +76,21 @@
                 <li>Sát thương chảy máu thay đổi từ <span class="HP">1%-1.7% (tăng theo level) Máu tối đa <span class="underline">của mục tiêu</span></span> thành 50-100<span class="AD">(+0.12AD cộng thêm)</span><span class="HP">(+1% Máu cộng thêm của mục tiêu)</span></li>
                 <li>Sát thương đòn đánh ở trạng thái cường hoá thay đổi từ <span class="HP">4%-6.8% (tăng theo level) Máu tối đa <span class="underline">của mục tiêu</span></span> thành 200-400<span class="AD">(+0.48AD cộng thêm)</span><span class="HP">(+4% Máu cộng thêm của mục tiêu)</span> (vẫn giữ tỷ lệ gấp 4 so với sát thương chảy máu)</li>
             </ul>
-            <em class="contentbox">Chiêu 1:</em> Hồi chiêu giảm từ 12s-8s xuống 10s-8s           
-            <br><br>
+            <br>
+            <p class="contentbox">
+              <em>Chiêu 1:</em> Hồi chiêu giảm từ 12s-8s xuống 10s-8s
+            </p>
+            <br>           
             <em class="contentbox">Chiêu 2:</em>
             <ul class="post">
                 <li>Hiệu quả <span class="HP">hồi Máu</span> trên đòn đánh thay đổi từ <span class="HP">6% Máu tối đa</span> thành 300-600<span class="HP">(+6% Máu cộng thêm) Máu</span></li>
                 <li>Thời gian hiệu lực của dấu ấn và hiệu ứng Giải Giới giảm từ 2s xuống 1.5s</li>
-            </ul>            
-            <em class="contentbox">Chiêu 3:</em> <span class="underline">Thêm cơ chế:</span> Đánh dấu kẻ địch trúng chiêu trong 2s, mỗi đòn đánh thường trúng kẻ địch bị đánh dấu sẽ hồi lại 300-600<span class="HP">(+6% Máu cộng thêm) Máu</span>            
+            </ul>
+            <br>
+            <p class="contentbox">
+              <em>Chiêu 3:</em> <span class="underline">Thêm cơ chế:</span> Đánh dấu kẻ địch trúng chiêu trong 2s, mỗi đòn đánh thường trúng kẻ địch bị đánh dấu sẽ hồi lại 300-600<span class="HP">(+6% Máu cộng thêm) Máu</span>    
+            </p>            
           </p>
-          <br>
           <h2>Điều chỉnh trang bị:</h2>
           <div class="champbox100">
             <img src="/img/item/support/lv1.webp" alt="Học Thức Bảo Thạch">
@@ -187,8 +193,11 @@
           </div>
         </article>
       </main>
+      <div id="index-button" onclick="toggleIndex()">☰ MỤC LỤC</div>
+      <div id="index-list"></div>
     </div>
     <script src="/js/nav.js"></script>
     <script src="/js/mobile-cover.js"></script>
+    <script src="/js/index-list.js"></script>
   </body>
 </html>
