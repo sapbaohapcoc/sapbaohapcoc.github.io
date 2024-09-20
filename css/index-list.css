@@ -1,0 +1,56 @@
+div#index-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+    background-color: blue;
+    color: whitesmoke;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 24px;
+    z-index: 9999;
+}
+
+div#index-list {
+    padding: 10px;
+    background-color: rgb(128, 128, 128);
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 25vw;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 9998;
+}
+
+div#index-list a {
+    color: whitesmoke;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin-bottom: 0.5em;
+}
+
+div#index-list a.h2 {
+    font-weight: bolder;
+}
+
+div#index-list a.h2:last-child {
+    margin-bottom: 0;
+}
+
+div#index-list a.h3 {
+    font-style: italic;
+    margin-left: 10px;
+}
+
+div#index-list a.h3:last-child {
+    margin-bottom: 0;
+}
+
+div#index-list a.h4 {
+    margin-left: 20px;
+}
+
+div#index-list a.h4:last-child {
+    margin-bottom: 0;
+}
