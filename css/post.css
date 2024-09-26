@@ -105,6 +105,10 @@ ul.post li {
   line-height: 2;
 }
 
+ul.minilist li {
+  margin-left: calc(var(--ul-margin-left) - 60px);
+}
+
 .center {
   display: block;
   margin-left: auto;
