@@ -1,6 +1,39 @@
 footer {
   background-color: whitesmoke;
-  position: fixed;
+  color: black;
+  text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
+  font-size: 36px;
   width: 100%;
-  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+}
+
+footer>#logo {
+  padding: 10px 0;
+  display: inline-block;
+}
+
+footer>#links {
+  display: inline-block;
+  flex-grow: 1;
+  text-align: center;
+}
+
+footer>#links>#links-title {
+  margin-bottom: 10px;
+}
+
+footer>#links>#links-list {
+  display: flex;
+  width: max-content;
+  margin: 0 auto;
+}
+
+footer>#links>#links-list img {
+  display: inline-block;
+  height: 50px;
+  width: auto;
+  margin: 0 5px;
 }
