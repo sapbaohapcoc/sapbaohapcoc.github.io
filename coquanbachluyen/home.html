@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cơ Quan Bách Luyện - Đến giờ kiếm chuyện rồi!</title>
     <link rel="icon" type="image/x-icon" href="/img/misc/icon.png" />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/coquanbachluyen/css/styles.css" />
     <link rel="stylesheet" href="/css/navbar.css" />
-    <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/end.css" />
-    <link rel="stylesheet" href="/css/post.css" />
   </head>
   <body>
     <div id="mobile-cover">
@@ -19,12 +17,35 @@
     <div class="content">
       <div id="nav-placeholder"></div>
       <main>
-        <article class="main_part">
-          <h2>Tướng:</h2>
-          <p class="contentbox">
-            Kỹ năng các Tướng trong chế độ này đều có sự đổi khác so với bình thường, xin hãy chú ý!
-          </p>
-        </article>
+        <div id="cqbl_tabs">
+          <a href="#" onclick="toggleHero()">Tướng</a>
+          <a href="#" onclick="toggleWeapon()">Vũ khí</a>
+          <a href="#" onclick="toggleItem()">Trang bị</a>
+        </div>
+        <div class="hero-list">
+          <span class="hero-block">
+            <img id="hero1" class="hero" src="/img/hero/luban7.webp" alt="Lỗ Ban Thất Hiệu">
+            Lỗ Ban Thất Hiệu
+            <div class="hero-box" data-img="hero1">
+              Tăng sát thương chí mạng
+            </div>
+          </span>
+            
+          <span class="hero-block">
+            <img id="hero2" class="hero" src="/img/hero/shenmengxi.webp" alt="Thẩm Mộng Khê">
+            Thẩm Mộng Khê
+          </span>
+          <span class="hero-block">
+            <img id="hero3" class="hero" src="/img/hero/sikongzhen.webp" alt="Tư Không Chấn">
+            Tư Không Chấn
+          </span>
+        </div>
+        <div class="weapon-list">
+
+        </div>
+        <div class="item-list">
+
+        </div>
       </main>
       <div id="end-placeholder"></div>
     </div>
@@ -32,5 +53,6 @@
     <script src="/js/nav.js"></script>
     <script src="/js/post_update.js"></script>
     <script src="/js/end.js"></script>
+    <script src="/coquanbachluyen/js/home.js"></script>
   </body>
 </html>

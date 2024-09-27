@@ -41,13 +41,6 @@ nav .menu a {
   text-decoration: none;
 }
 
-nav .menu-icon {
-  display: none;
-  font-size: 72px;
-  color: black;
-  cursor: pointer;
-}
-
 .dropdown-menu {
   display: none;
   position: absolute;

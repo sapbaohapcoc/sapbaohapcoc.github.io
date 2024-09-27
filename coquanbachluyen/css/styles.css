@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@font-face {
+  font-family: "Baloo";
+  src: url("/fonts/Baloo-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#mobile-cover {
+  display: none; /* Hide by default */
+}
+  
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  #mobile-cover {
+    display: grid;
+    place-items: center; /* Show on mobile devices in portrait orientation */
+    position: fixed; /* Position it as a topmost layer */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000; /* Ensure it is on top */
+    text-align: center;
+    background-color: black;
+  }
+  
+  #mobile-cover h1 {
+    color: whitesmoke;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-image: url("/img/background/coquanbachluyen.png"); /* Replace with your image URL */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-attachment: fixed; /* Make the background image fixed */
+  background-size: cover; /* Ensure the image covers the entire viewport */
+  background-position: center; /* Center the image */
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+body a {
+  text-decoration: none;
+  color: black;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+}
+  
+body a:hover {
+  transform: scale(1.05);
+}
+
+main {
+  margin-top: 77px;
+  padding: 1em;
+}
+
+#cqbl_tabs {
+  background-color: gray;
+  display: flex;
+  padding: 0.5em;
+  font-size: 36px;
+  justify-content: space-around;
+}
+
+#cqbl_tabs a {
+  margin: auto;
+  color: whitesmoke;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.hero-list {
+  display: flex;
+  background-color: whitesmoke;
+  padding: 1em;
+  justify-content: space-around;
+}
+
+.hero-list img {
+  height: 100px;
+  width: auto;
+}
+
+.hero-list .hero-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: black;
+  line-height: 2;
+}
+
+.hero-box, .weapon-box, .item-box {
+  display: none;
+  position: absolute;
+  border: 1px solid black;
+  background-color: rgb(85, 85, 85);
+  padding: 1em;
+  z-index: 1000;
+}
+
+.weapon-list, .item-list {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 2; /* Ensure the content is above the overlay */
+  color: whitesmoke; /* Adjust text color for better readability */
+}
+
+.post-preview {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
