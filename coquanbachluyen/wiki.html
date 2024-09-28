@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cơ Quan Bách Luyện - Bách Khoa Toàn Thư</title>
+    <link rel="icon" type="image/x-icon" href="/img/misc/icon.png" />
+    <link rel="stylesheet" href="/coquanbachluyen/css/styles.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/end.css" />
+  </head>
+  <body>
+    <div id="mobile-cover">
+      <!-- Render blocking cover for portrait mode -->
+    </div>
+    <div class="content">
+      <div id="nav-placeholder"></div>
+      <main>
+        <div id="cqbl_tabs">
+          <a href="#" onclick="toggleHero()">Tướng</a>
+          <a href="#" onclick="toggleWeapon()">Vũ khí</a>
+          <a href="#" onclick="toggleItem()">Trang bị</a>
+        </div>
+        <div class="hero-list">
+          <span class="hero-block">
+            <img id="hero1" class="hero" src="/img/hero/luban7.webp" alt="Lỗ Ban Thất Hiệu">
+            Lỗ Ban Thất Hiệu
+            <div class="hero-box" data-img="hero1">
+              <strong>Chỉ số tăng theo mỗi level:</strong>
+                <ul class="close">
+                  <li>Máu tối đa +10</li>
+                  <li>Khuếch đại sát thương +3%</li>
+                  <li>Tốc đánh +2%</li>
+                </ul>
+              <strong>Nội tại:</strong>
+                <span class="margin">
+                  Tăng tỷ lệ roll ra <em>Vật phẩm (Vũ khí, Trang bị)</em> bạn cần trong shop
+                  <br>
+                  (Hiện chưa rõ là theo thuộc tính Tướng hay theo kho đồ đang có)
+                </span>
+              <strong>Kích hoạt:</strong>
+                <span class="margin">
+                  Triệu hồi máy bay ném bom từ trên không, tồn tại 10s.
+                  <br>
+                  Mỗi 0.5s, máy bay oanh tạc, gây 45(+1.5×<em>Sát thương cận chiến</em>)(+1.5×<em>Sát thương tầm xa</em>) sát thương lên kẻ địch trong phạm vi.
+                  <br>
+                  Khi Lỗ Ban Thất Hiệu đứng trong phạm vi sát thương của máy bay, bản thân được tăng 15(+1×level)% <em>Khuếch đại sát thương</em>.
+                  <br>
+                  <em>Hồi chiêu:</em> 10s
+                </span>
+            </div>
+          </span> 
+          <span class="hero-block">
+            <img id="hero2" class="hero" src="/img/hero/shenmengxi.webp" alt="Thẩm Mộng Khê">
+            Thẩm Mộng Khê
+            <div class="hero-box" data-img="hero2">
+              <strong>Chỉ số tăng theo mỗi level:</strong>
+                <ul class="close">
+                  <li>Máu tối đa +10</li>
+                  <li>Sát thương tầm xa +5</li>
+                  <li>Tốc đánh +2%</li>
+                </ul>
+              <strong>Nội tại:</strong>
+                <span class="margin">
+                  Tăng thêm (1×level)% bán kính <em>Vụ nổ</em>
+                </span>
+              <strong>Kích hoạt:</strong>
+                <span class="margin">
+                  Tăng 35% tốc chạy trong 8.5s tiếp theo.
+                  <br>
+                  Trong thời gian này, mỗi 1.5s sẽ ném ra 3 quả bom ra xung quanh, mỗi quả bom tạo thành <em>Vụ nổ</em> gây 40(+40×level) sát thương đồng thời đẩy lùi kẻ địch trúng phải.
+                  <br>
+                  <em>Hồi chiêu:</em> 10s
+                </span>
+            </div>
+          </span>
+          <span class="hero-block">
+            <img id="hero3" class="hero" src="/img/hero/sikongzhen.webp" alt="Tư Không Chấn">
+            Tư Không Chấn
+            <div class="hero-box" data-img="hero3">
+              <strong>Chỉ số tăng theo mỗi level:</strong>
+                <ul class="close">
+                  <li>Máu tối đa +10</li>
+                  <li>Khuếch đại sát thương +2%</li>
+                  <li>Tỷ lệ chí mạng +1%</li>
+                </ul>
+              <strong>Nội tại:</strong>
+                <span class="margin">
+                  <em>Tia sét</em> có thể <span class="underline">chí mạng</span>
+                </span>
+              <strong>Kích hoạt:</strong>
+                <span class="margin">
+                  Biến hình và gây 60(+60×level) sát thương lên kẻ địch xung quanh.
+                  <br>
+                  Trong trạng thái biến hình, mỗi 0.5s sẽ phóng ra 3 <em>Tia sét</em> tấn công, mỗi <em>Tia sét</em> gây 100% sát thương lên mục tiêu chính và 50% sát thương lan sang tối đa 2 mục tiêu phụ ở gần đó.
+                  <br>
+                  Trạng thái biến hình duy trì 8s, hồi chiêu chỉ bắt đầu đếm khi kết thúc trạng thái.
+                  <br>
+                  <em>Hồi chiêu:</em> 20s
+                </span>
+            </div>
+          </span>
+          <span class="hero-block">
+            <img id="hero4" class="hero" src="/img/hero/arthur.webp" alt="Arthur">
+            Arthur
+            <div class="hero-box" data-img="hero4">
+              <strong>Chỉ số tăng theo mỗi level:</strong>
+                <ul class="close">
+                  <li>Máu tối đa +12</li>
+                  <li>Tốc chạy +2%</li>
+                  <li>Sát thương cận chiến +10</li>
+                </ul>
+              <strong>Nội tại:</strong>
+                <span class="margin">
+                  Tăng <em>Tốc độ hồi máu</em> thêm 25%
+                </span>
+              <strong>Kích hoạt:</strong>
+                <span class="margin">
+                  Trong 3s tiếp theo, nhận thêm (10×level) <em>Sát thương cận chiến</em>, đồng thời triệu hồi thần khiên xoay quanh bản thân, mỗi 0.5s gây 20(+1×<em>Sát thương cận chiến</em>) sát thương lên kẻ địch xung quanh
+                  <br>
+                  <em>Hồi chiêu:</em> 10s
+                </span>
+            </div>
+          </span>
+          <span class="hero-block">
+            <img id="hero5" class="hero" src="/img/hero/bianque.webp" alt="Biển Thước">
+            Biển Thước
+            <div class="hero-box" data-img="hero5">
+              <strong>Chỉ số tăng theo mỗi level:</strong>
+                <ul class="close">
+                  <li>Máu tối đa +12</li>
+                  <li>Tốc đánh +2%</li>
+                  <li>Phòng ngự +3</li>
+                </ul>
+              <strong>Nội tại:</strong>
+                <span class="margin">
+                  Hiệu ứng <em>Độc</em> có thể cộng dồn tới 5 lần, mỗi cộng dồn tăng thêm 60% sát thương
+                </span>
+              <strong>Kích hoạt:</strong>
+                <span class="margin">
+                  Phóng độc dược theo hướng chỉ định, gây 30(+10×level)(+0.2×<em>Máu tối đa</em>) sát thương lên kẻ địch, đồng thời đặt 3 cộng dồn hiệu ứng <em>Độc</em> lên chúng. Bản thân và các đồng minh chạm vào độc dược sẽ được hồi 4(+4×level) Máu.
+                  <br>
+                  Sau khi đạt tới tầm xa tối đa, luồng độc dược sẽ quay trở về với Biển Thước.
+                  <em>Hồi chiêu:</em> 8s
+                </span>
+            </div>
+          </span>
+        </div>
+        <div class="weapon-list">
+
+        </div>
+        <div class="item-list">
+
+        </div>
+      </main>
+      <div id="end-placeholder"></div>
+    </div>
+    <script src="/js/mobile-cover.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/post_update.js"></script>
+    <script src="/js/end.js"></script>
+    <script src="/coquanbachluyen/js/home.js"></script>
+    <script src="/coquanbachluyen/js/hero-list.js"></script>
+  </body>
+</html>
