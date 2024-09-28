@@ -41,13 +41,6 @@ nav .menu a {
   text-decoration: none;
 }
 
-nav .menu-icon {
-  display: none;
-  font-size: 72px;
-  color: black;
-  cursor: pointer;
-}
-
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -65,16 +58,5 @@ nav .menu-icon {
   text-decoration: none;
   display: block;
   text-align: left;
-}
-
-/* Responsive styles */
-@media (max-width: 480px) {
-  nav .menu {
-    display: none;
-  }
-
-  nav .menu-icon {
-    display: block;
-  }
 }
 
