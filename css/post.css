@@ -238,3 +238,23 @@ h4.title {
   margin: 0 15px;
 }
 
+.tooltip {
+  display: none;
+  width: 500px;
+  flex-direction: column;
+  text-align: left;
+  position: absolute;
+  z-index: 2;
+  border: 1px solid black;
+  background-color: rgb(85, 85, 85);
+  padding: 0.5em;
+  pointer-events: none;
+  line-height: 1.5;
+}
+
+img.inline {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
