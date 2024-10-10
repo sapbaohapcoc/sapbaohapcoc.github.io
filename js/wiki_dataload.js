@@ -34,9 +34,11 @@ function attachArea() {
     const area = title.nextElementSibling;
 
     title.addEventListener("click", () => {
-      const isDisplayed = window.getComputedStyle(area).display !== "none";
-
-      area.style.display = isDisplayed ? "none" : "flex";
+      if (area.style.display === "none") {
+        area.style.display = "flex";
+      } else {
+        area.style.display = "none";
+      }
     })
   })
 }
