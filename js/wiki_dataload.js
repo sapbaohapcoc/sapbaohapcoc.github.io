@@ -57,9 +57,7 @@ function attachTooltip() {
     const tooltip = img.nextElementSibling;
 
     img.addEventListener("mousemove", (e) => {
-      if (tooltip.style.display !== "flex") {
-        tooltip.style.display = "flex";
-      }
+      tooltip.style.display = "flex";
 
       const mouseX = e.clientX,
             mouseY = e.clientY;
