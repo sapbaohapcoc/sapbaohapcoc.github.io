@@ -1,6 +1,6 @@
-const heroList = document.querySelector(".hero-list"),
-      itemList = document.querySelector(".item-list"),
-      spellList = document.querySelector(".spell-list");
+const heroList = document.getElementById("hero-list"),
+      itemList = document.getElementById("item-list"),
+      spellList = document.getElementById("spell-list");
 
 function toggleHero() {
   heroList.style.display = "flex";

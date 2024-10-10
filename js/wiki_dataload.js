@@ -1,75 +1,92 @@
 function loadData() {
-  fetch("/html/partials/wiki-hero.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.querySelector(".hero-list").innerHTML = data;
-      attachArea();
-      attachTooltip();
-    })
-    .catch((error) => console.error("Error loading hero-data:", error));
+  const fetchCmds = [
+    fetch("/html/partials/wiki-item.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("item-list").innerHTML = data;
+      })
+      .catch(error => console.log("Error loading item-list:", error)),
 
-  fetch("/html/partials/wiki-item.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.querySelector(".item-list").innerHTML = data;
-      attachArea();
-      attachTooltip();
-    })
-    .catch((error) => console.error("Error loading item-data:", error));
+    fetch("/html/partials/wiki-hero.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("hero-list").innerHTML = data;
+      })
+      .catch(error => console.log("Error loading hero-list:", error)),
 
-  fetch("/html/partials/wiki-spell.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.querySelector(".spell-list").innerHTML = data;
-      attachArea();
+    fetch("/html/partials/wiki-spell.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("spell-list").innerHTML = data;
+      })
+      .catch(error => console.log("Error loading spell-list:", error))
+  ];
+
+  Promise.all(fetchCmds)
+    .then(() => {
+      enableCategory();
       attachTooltip();
     })
-    .catch((error) => console.error("Error loading spell-data:", error));
+    .catch(error => console.log("Error loading all data:", error));
 }
 
-function attachArea() {
-  const titles = document.querySelectorAll(".category-title");
+function enableCategory() {
+  const categories = document.querySelectorAll(".category");
 
-  titles.forEach((title) => {
-    const area = title.nextElementSibling;
+  categories.forEach((category) => {
+    const currentArea = category.nextElementSibling,
+          areas = document.querySelectorAll(".area");
 
-    title.addEventListener("click", () => {
-      if (area.style.display === "none") {
-        area.style.display = "flex";
+    category.addEventListener("click", () => {
+      if (currentArea.style.display === "flex") {
+        currentArea.style.display = "none";
       } else {
-        area.style.display = "none";
+        areas.forEach(area => {
+          area.style.display = "none";
+        });
+        currentArea.style.display = "flex";
       }
     })
   })
 }
 
 function attachTooltip() {
-  const imgs = document.querySelectorAll(".hero, .item, .spell");
+  const imgs = document.querySelectorAll("img.hero, img.item, img.spell");
 
   imgs.forEach((img) => {
     const tooltip = img.nextElementSibling;
 
     img.addEventListener("mousemove", (e) => {
-      tooltip.style.display = "flex";
-
-      const screenWidth = window.innerWidth,
-            tooltipWidth = 500,
-            spacetoRight = screenWidth - e.pageX;
-
-      if (spacetoRight < tooltipWidth + 100) {
-        tooltip.style.right = `${screenWidth - e.pageX + 10}px`;
-      } else {
-        tooltip.style.left = `${e.pageX + 10}px`;
+      if (tooltip.style.display !== "flex") {
+        tooltip.style.display = "flex";
       }
-      tooltip.style.top = `${e.pageY - 67}px`;
-    });
+
+      const mouseX = e.clientX,
+            mouseY = e.clientY;
+            tooltipWidth = tooltip.clientWidth;
+            tooltipHeight = tooltip.clientHeight;
+            viewWidth = window.innerWidth;
+            viewHeight = window.innerHeight;
+            toRight = viewWidth - mouseX;
+            toBottom = viewHeight - mouseY;
+      
+      if (toRight < tooltipWidth + 50) {
+        tooltip.style.right = (viewWidth - mouseX + 10) + "px";
+      } else {
+        tooltip.style.left = (mouseX + 10) + "px";
+      }
+      
+      if (toBottom < tooltipHeight + 50) {
+        tooltip.style.bottom = (viewHeight - mouseY + 10) + "px";
+      } else {
+        tooltip.style.top = (mouseY + 10) + "px";
+      }
+    })
 
     img.addEventListener("mouseleave", () => {
       tooltip.style.display = "none";
-    });
-  });
+    })
+  })
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  loadData();
-});
+document.addEventListener("DOMContentLoaded", loadData);
