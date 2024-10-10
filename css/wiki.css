@@ -143,6 +143,14 @@ article {
   background-color: rgb(170, 170, 170);
 }
 
+.spell-area {
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+  justify-content: space-around;
+  background-color: rgb(170, 170, 170);
+}
+
 .show {
   display: flex;
 }
