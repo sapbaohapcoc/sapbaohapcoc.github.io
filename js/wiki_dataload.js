@@ -86,16 +86,20 @@ function attachTooltip() {
             toRight = viewWidth - mouseX;
             toBottom = viewHeight - mouseY;
       
-      if (toRight < tooltipWidth + 50) {
+      if (toRight < tooltipWidth + 10) {
         tooltip.style.right = (viewWidth - mouseX + 10) + "px";
       } else {
         tooltip.style.left = (mouseX + 10) + "px";
       }
-      
-      if (toBottom < tooltipHeight + 50) {
-        tooltip.style.bottom = (viewHeight - mouseY + 10) + "px";
+
+      if (tooltipHeight * 2 > viewHeight) {
+        tooltip.style.top = (viewHeight - tooltipHeight) / 2 + "px";
       } else {
-        tooltip.style.top = (mouseY + 10) + "px";
+        if (toBottom < tooltipHeight + 10) {
+          tooltip.style.bottom = (viewHeight - mouseY + 10) + "px";
+        } else {
+          tooltip.style.top = (mouseY + 10) + "px";
+        }
       }
     })
 
