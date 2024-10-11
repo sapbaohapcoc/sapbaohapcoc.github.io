@@ -48,6 +48,24 @@ function enableCategory() {
       }
     })
   })
+
+  const miniCategories = document.querySelectorAll(".mini-category");
+
+  miniCategories.forEach((miniCategory) => {
+    const currentMiniArea = miniCategory.nextElementSibling,
+          miniAreas = document.querySelectorAll(".mini-area");
+
+    miniCategory.addEventListener("click", () => {
+      if (currentMiniArea.style.display === "flex") {
+        currentMiniArea.style.display = "none";
+      } else {
+        miniAreas.forEach(miniArea => {
+          miniArea.style.display = "none";
+        });
+        currentMiniArea.style.display = "flex";
+      }
+    })
+  })
 }
 
 function attachTooltip() {

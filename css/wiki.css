@@ -85,8 +85,16 @@ main {
   text-indent: 0.5em;
 }
 
+.double-indent {
+  text-indent: 1em;
+}
+
 .margin {
   margin-left: 0.5em;
+}
+
+.double-margin {
+  margin-left: 1em;
 }
 
 ul.close {
@@ -137,10 +145,18 @@ article {
 
 .area {
   display: none;
-  flex-direction: row;
+  flex-direction: column;
   padding: 1em;
   justify-content: space-around;
   background-color: rgb(170, 170, 170);
+}
+
+.mini-area {
+  display: none;
+  flex-direction: row;
+  padding: 1em;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .spell-area {
@@ -158,7 +174,7 @@ article {
 img.hero, img.item, img.spell {
   height: 100px;
   width: auto;
-  border: black 1px solid;
+  border-radius: 50%;
 }
 
 .block {
@@ -180,10 +196,14 @@ img.hero, img.item, img.spell {
   position: fixed;
   z-index: 10001;
   border: 1px solid black;
-  background-color: rgb(85, 85, 85);
+  background-color: whitesmoke;
   padding: 0.5em;
   pointer-events: none;
   line-height: 1.5;
+}
+
+.tooltip img {
+  vertical-align: middle;
 }
 
 
@@ -253,7 +273,7 @@ em, strong {
   white-space: normal;
 }
 
-.category {
+.category, .mini-category {
   align-self: left;
   color: black;
   font-weight: bolder;
@@ -261,8 +281,9 @@ em, strong {
   padding: 0.5em;
   background-color: gray;
   cursor: pointer;
+  border: black 1px solid;
 }
 
-.attribute, .price, .fxs, .unlock-lv, .cooldown {
+.attribute, .price, .recipe, .fxs, .unlock-lv, .cooldown {
   margin: 0.5em;
 }
