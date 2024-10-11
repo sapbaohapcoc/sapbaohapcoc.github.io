@@ -247,8 +247,8 @@ img.hero, img.item, img.spell {
 }
 
 .MPen {
-  color: violet;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: black;
+  text-shadow: -1px 0 violet, 0 1px violet, 1px 0 violet, 0 -1px violet;
 }
 
 .MR {
