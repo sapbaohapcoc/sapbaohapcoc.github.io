@@ -72,40 +72,50 @@ function attachTooltip() {
   const imgs = document.querySelectorAll("img.hero, img.item, img.spell");
 
   imgs.forEach((img) => {
-    const tooltip = img.nextElementSibling;
+    const info = img.nextElementSibling;
 
-    img.addEventListener("mousemove", (e) => {
-      tooltip.style.display = "flex";
+    if (info.className === "tooltip") {
+      const tooltip = info;
 
-      const mouseX = e.clientX,
-            mouseY = e.clientY;
-            tooltipWidth = tooltip.clientWidth;
-            tooltipHeight = tooltip.clientHeight;
-            viewWidth = window.innerWidth;
-            viewHeight = window.innerHeight;
-            toRight = viewWidth - mouseX;
-            toBottom = viewHeight - mouseY;
-      
-      if (toRight < tooltipWidth + 10) {
-        tooltip.style.right = (viewWidth - mouseX + 10) + "px";
-      } else {
-        tooltip.style.left = (mouseX + 10) + "px";
-      }
-
-      if (tooltipHeight * 2 > viewHeight) {
-        tooltip.style.top = (viewHeight - tooltipHeight) / 2 + "px";
-      } else {
-        if (toBottom < tooltipHeight + 10) {
-          tooltip.style.bottom = (viewHeight - mouseY + 10) + "px";
+      img.addEventListener("mousemove", (e) => {
+        tooltip.style.display = "flex";
+  
+        const mouseX = e.clientX,
+              mouseY = e.clientY;
+              tooltipWidth = tooltip.clientWidth;
+              tooltipHeight = tooltip.clientHeight;
+              viewWidth = window.innerWidth;
+              viewHeight = window.innerHeight;
+              toRight = viewWidth - mouseX;
+              toBottom = viewHeight - mouseY;
+        
+        if (toRight < tooltipWidth + 10) {
+          tooltip.style.right = (viewWidth - mouseX + 10) + "px";
         } else {
-          tooltip.style.top = (mouseY + 10) + "px";
+          tooltip.style.left = (mouseX + 10) + "px";
         }
+  
+        if (tooltipHeight * 2 > viewHeight) {
+          tooltip.style.top = (viewHeight - tooltipHeight) / 2 + "px";
+        } else {
+          if (toBottom < tooltipHeight + 10) {
+            tooltip.style.bottom = (viewHeight - mouseY + 10) + "px";
+          } else {
+            tooltip.style.top = (mouseY + 10) + "px";
+          }
+        }
+      })
+  
+      img.addEventListener("mouseleave", () => {
+        tooltip.style.display = "none";
+      })
+    } else {
+      if (info.className === "popup") {
+        const popup = info;
+  
+        
       }
-    })
-
-    img.addEventListener("mouseleave", () => {
-      tooltip.style.display = "none";
-    })
+    }
   })
 }
 
