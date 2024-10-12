@@ -107,6 +107,11 @@ ul.close>li {
   margin: 0px;
 }
 
+ul.close>li::marker {
+  display: flexbox;
+  vertical-align: baseline;
+}
+
 article {
   padding: 1em;
   font-size: 20px;
@@ -277,6 +282,7 @@ img.hero, img.item, img.spell {
 .dmgTrue {
   color: black;
   text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
+  background-color: rgb(170, 170, 170);
 }
 
 .shield {
@@ -284,8 +290,15 @@ img.hero, img.item, img.spell {
   text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
 }
 
+.pump {
+  color: black;
+  text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
 em, strong {
-  display: inline-block;
+  display: inline;
   white-space: normal;
 }
 
