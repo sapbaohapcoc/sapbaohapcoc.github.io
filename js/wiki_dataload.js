@@ -69,8 +69,6 @@ function enableCategory() {
 }
 
 function attachTooltip() {
-  const blurCover = document.getElementById("blur-cover");
-
   const imgs = document.querySelectorAll("img.hero, img.item, img.spell");
 
   imgs.forEach((img) => {
@@ -110,7 +108,8 @@ function attachTooltip() {
     })
 
     if (!img.classList.contains("spell")) {
-      const popup = tooltip.nextElementSibling;
+      const popup = tooltip.nextElementSibling,
+            blurCover = document.getElementById("blur-cover");
 
       img.addEventListener("click", () => {
         blurCover.style.display = "block";
@@ -120,7 +119,6 @@ function attachTooltip() {
 
         blurCover.addEventListener("click", () => {
           popup.style.display = "none";
-          blurCover.style.display = "none";
         })
       })
     }
