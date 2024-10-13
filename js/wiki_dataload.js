@@ -72,7 +72,11 @@ function attachTooltip() {
   const imgs = document.querySelectorAll("img.hero, img.item, img.spell");
 
   imgs.forEach((img) => {
-    const tooltip = img.nextElementSibling;
+    let tooltip = img.nextElementSibling;
+
+    if (img.classList.contains("hero")) {
+      tooltip = img.parentElement.nextElementSibling;
+    }
 
     img.addEventListener("mousemove", (e) => {
       tooltip.style.display = "flex";
@@ -107,7 +111,7 @@ function attachTooltip() {
       tooltip.style.display = "none";
     })
 
-    if (!img.classList.contains("spell")) {
+    if (img.classList.contains("item")) {
       const popup = tooltip.nextElementSibling,
             blurCover = document.getElementById("blur-cover");
 
