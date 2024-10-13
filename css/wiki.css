@@ -232,13 +232,15 @@ img.hero, img.item, img.spell {
   border: 1px solid black;
   background-color: whitesmoke;
   padding: 0.5em;
-  pointer-events: none;
+  pointer-events: auto;
   line-height: 1.5;
   overflow: auto;
 }
 
 .tooltip img, .popup img {
   vertical-align: middle;
+  width: 64px;
+  height: 64px;
 }
 
 .HP {

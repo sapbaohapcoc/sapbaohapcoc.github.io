@@ -109,19 +109,21 @@ function attachTooltip() {
       tooltip.style.display = "none";
     })
 
-    const popup = tooltip.nextElementSibling;
+    if (!img.classList.contains("spell")) {
+      const popup = tooltip.nextElementSibling;
 
-    img.addEventListener("click", () => {
-      blurCover.style.display = "block";
-      popup.style.display = "flex";
-      popup.style.top = "25vh";
-      popup.style.left = "25vw";
+      img.addEventListener("click", () => {
+        blurCover.style.display = "block";
+        popup.style.display = "flex";
+        popup.style.top = "25vh";
+        popup.style.left = "25vw";
 
-      blurCover.addEventListener("click", () => {
-        popup.style.display = "none";
-        blurCover.style.display = "none";
+        blurCover.addEventListener("click", () => {
+          popup.style.display = "none";
+          blurCover.style.display = "none";
+        })
       })
-    })
+    }
   })
 }
 
