@@ -240,6 +240,10 @@ article {
   justify-items: center;
 }
 
+.mini-area.enchant {
+  display: none;
+}
+
 .spell-area {
   display: flex;
   flex-direction: row;
@@ -391,4 +395,12 @@ em, strong {
 
 .attribute, .price, .recipe, .fxs, .unlock-lv, .cooldown {
   margin: 0.5em;
+}
+
+.NOTE {
+  color: black;
+  text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 0.25em;
 }

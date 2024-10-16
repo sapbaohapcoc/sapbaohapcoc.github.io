@@ -143,7 +143,7 @@ function attachItemTooltip() {
   const items = document.querySelectorAll("img.item");
 
   items.forEach((item) => {
-    const tooltip = item.parentElement.querySelector(".tooltip");
+    const tooltip = item.nextElementSibling;
 
     item.addEventListener("mousemove", (e) => {
       tooltip.style.display = "flex";
@@ -156,7 +156,7 @@ function attachItemTooltip() {
             viewHeight = window.innerHeight;
             toRight = viewWidth - mouseX;
             toBottom = viewHeight - mouseY;
-
+      
       if (toRight < tooltipWidth + 10) {
         tooltip.style.right = (viewWidth - mouseX + 10) + "px";
       } else {
