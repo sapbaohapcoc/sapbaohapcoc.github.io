@@ -221,7 +221,24 @@ article {
 #info-box {
   padding: 0.5em;
   border: black 1px solid;
-  background-color: rgb(170, 170, 170);
+  background-color: whitesmoke;
+  color: black;
+  text-shadow: 1px 0 white, 0 1px white, -1px 0 white, 0 -1px white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 100%;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+#info-box img {
+  vertical-align: middle;
+}
+
+#info-box strong {
+  font-weight: 1500;
 }
 
 .area {
@@ -238,10 +255,6 @@ article {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
   justify-items: center;
-}
-
-.mini-area.enchant {
-  display: none;
 }
 
 .spell-area {

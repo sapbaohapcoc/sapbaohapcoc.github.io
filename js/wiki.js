@@ -58,7 +58,6 @@ function loadData() {
       loadItemData();
       fixItemHeight();
       enableItemCategory();
-      attachItemTooltip();
       attachSpellTooltip();
     })
     .catch(error => console.log("Error loading all data:", error));
@@ -112,6 +111,9 @@ function loadItemData() {
   ]
 
   Promise.all(fetchCmds)
+    .then(() => {
+      attachItemTooltip();
+    })
     .catch(error => console.log("Error loading items' data:", error));
 }
 
@@ -143,39 +145,11 @@ function attachItemTooltip() {
   const items = document.querySelectorAll("img.item");
 
   items.forEach((item) => {
-    const tooltip = item.nextElementSibling;
+    item.addEventListener("click", () => {
+      const tooltip = item.parentElement.querySelector(".tooltip"),
+            infoBox = document.querySelector("#info-box.item");
 
-    item.addEventListener("mousemove", (e) => {
-      tooltip.style.display = "flex";
-
-      const mouseX = e.clientX,
-            mouseY = e.clientY;
-            tooltipWidth = tooltip.clientWidth;
-            tooltipHeight = tooltip.clientHeight;
-            viewWidth = window.innerWidth;
-            viewHeight = window.innerHeight;
-            toRight = viewWidth - mouseX;
-            toBottom = viewHeight - mouseY;
-      
-      if (toRight < tooltipWidth + 10) {
-        tooltip.style.right = (viewWidth - mouseX + 10) + "px";
-      } else {
-        tooltip.style.left = (mouseX + 10) + "px";
-      }
-
-      if (tooltipHeight * 2 > viewHeight) {
-        tooltip.style.top = (viewHeight - tooltipHeight) / 2 + "px";
-      } else {
-        if (toBottom < tooltipHeight + 10) {
-          tooltip.style.bottom = (viewHeight - mouseY + 10) + "px";
-        } else {
-          tooltip.style.top = (mouseY + 10) + "px";
-        }
-      }
-    })
-
-    item.addEventListener("mouseleave", () => {
-      tooltip.style.display = "none";
+      infoBox.innerHTML = tooltip.innerHTML;
     })
   })
 }
