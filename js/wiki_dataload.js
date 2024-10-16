@@ -1,36 +1,37 @@
 function loadData() {
   const fetchCmds = [
-    fetch("/html/partials/wiki-item.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("item-list").innerHTML = data;
-      })
-      .catch(error => console.log("Error loading item-list:", error)),
+    fetch("/wiki/wiki-hero.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("hero-list").innerHTML = data;
+    })
+    .catch(error => console.log("Error loading " + destination + ": ", error)),
 
-    fetch("/html/partials/wiki-hero.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("hero-list").innerHTML = data;
-      })
-      .catch(error => console.log("Error loading hero-list:", error)),
+    fetch("/wiki/wiki-item.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("item-list").innerHTML = data;
+    })
+    .catch(error => console.log("Error loading " + destination + ": ", error)),
 
-    fetch("/html/partials/wiki-spell.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("spell-list").innerHTML = data;
-      })
-      .catch(error => console.log("Error loading spell-list:", error))
+    fetch("/wiki/wiki-spell.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("spell-list").innerHTML = data;
+    })
+    .catch(error => console.log("Error loading " + destination + ": ", error))
   ];
 
   Promise.all(fetchCmds)
     .then(() => {
-      enableCategory();
-      attachTooltip();
+      //enableCategory();
+      enableItemCategory();
+      attachSpellTooltip();
     })
     .catch(error => console.log("Error loading all data:", error));
 }
 
-function enableCategory() {
+/*function enableCategory() {
   const categories = document.querySelectorAll(".category");
 
   categories.forEach((category) => {
@@ -66,19 +67,35 @@ function enableCategory() {
       }
     })
   })
+}*/
+
+function enableItemCategory() {
+  const titles = document.querySelectorAll("#categories.item>.category");
+
+  titles.forEach((title) => {
+    const currentCategory = document.querySelector("#" + title.id + ".area"),
+          categories = document.querySelectorAll("#overflow-list.item>.area");
+
+    title.addEventListener("click", () => {
+      if (currentCategory.style.display === "flex") {
+        currentCategory.style.display = "none";
+      } else {
+        categories.forEach(category => {
+          category.style.display = "none";
+        })
+        currentCategory.style.display = "flex";
+      }
+    })
+  })
 }
 
-function attachTooltip() {
-  const imgs = document.querySelectorAll("img.hero, img.item, img.spell");
+function attachSpellTooltip() {
+  const spells = document.querySelectorAll("img.spell");
 
-  imgs.forEach((img) => {
-    let tooltip = img.nextElementSibling;
+  spells.forEach((spell) => {
+    const tooltip = spell.nextElementSibling;
 
-    if (img.classList.contains("hero")) {
-      tooltip = img.parentElement.nextElementSibling;
-    }
-
-    img.addEventListener("mousemove", (e) => {
+    spell.addEventListener("mousemove", (e) => {
       tooltip.style.display = "flex";
 
       const mouseX = e.clientX,
@@ -107,25 +124,9 @@ function attachTooltip() {
       }
     })
 
-    img.addEventListener("mouseleave", () => {
+    spell.addEventListener("mouseleave", () => {
       tooltip.style.display = "none";
     })
-
-    if (img.classList.contains("item")) {
-      const popup = tooltip.nextElementSibling,
-            blurCover = document.getElementById("blur-cover");
-
-      img.addEventListener("click", () => {
-        blurCover.style.display = "block";
-        popup.style.display = "flex";
-        popup.style.top = "25vh";
-        popup.style.left = "25vw";
-
-        blurCover.addEventListener("click", () => {
-          popup.style.display = "none";
-        })
-      })
-    }
   })
 }
 

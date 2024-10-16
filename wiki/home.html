@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bách Khoa Vương Giả</title>
+    <link rel="icon" type="image/x-icon" href="/img/misc/icon.png" />
+    <link rel="stylesheet" href="/css/wiki.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/end.css" />
+  </head>
+  <body>
+    <div id="mobile-cover">
+      <!-- Render blocking cover for portrait mode -->
+    </div>
+    <div class="content">
+      <div id="blur-cover" onclick="removeBlur()"></div>
+      <div id="nav-placeholder"></div>
+      <main>
+        <div id="wiki_tabs">
+          <a href="#" onclick="toggleHero()">Tướng</a>
+          <a href="#" onclick="toggleItem()">Trang bị</a>
+          <a href="#" onclick="toggleSpell()">Phép bổ trợ</a>
+        </div>
+        <div id="hero-list"></div>
+        <div id="item-list"></div>
+        <div id="spell-list"></div>
+      </main>
+      <div id="end-placeholder"></div>
+    </div>
+    <script src="/js/mobile-cover.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/end.js"></script>
+    <script src="/js/wiki.js"></script>
+  </body>
+</html>
